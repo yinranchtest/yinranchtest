@@ -1,0 +1,5 @@
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures that no extra space is added below the image */
+}

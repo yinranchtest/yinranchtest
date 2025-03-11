@@ -1,0 +1,17 @@
+<section id="gallery" class="bg-gray-50">
+  <div fxFill fxLayout="column" fxLayoutAlign="space-between">
+    <div fxLayout="row wrap" class="app-gallery">
+      <ng-container *ngFor="let image of data">
+        <div class="image-item">
+          <img [src]="image.url" alt="Image">
+        </div>
+      </ng-container>
+    </div>
+    <mat-paginator [length]="data2.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[4, 8, 12]"
+    (page)="getData($event)">
+    </mat-paginator>
+  </div>
+</section>

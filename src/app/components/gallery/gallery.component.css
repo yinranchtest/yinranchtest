@@ -1,0 +1,23 @@
+/* Flexbox setup for .app-gallery */
+.app-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 16px; /* Space between items */
+    justify-content: flex-start; /* Align items from the start */
+  }
+  
+  /* Image item styling */
+  .app-gallery .image-item {
+    flex: 0 1 calc(25% - 16px); /* 4 items per row */
+    box-sizing: border-box; /* Avoid overflow issues */
+    margin-bottom: 16px; /* Space below each item */
+  }
+  
+  /* Image styling inside the item */
+  .app-gallery .image-item img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Max height of the image */
+    object-fit: cover; /* Ensure images fill the container */
+    border-radius: 8px; /* Optional, rounded corners */
+  }

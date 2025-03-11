@@ -1,0 +1,69 @@
+<section id="attractions" class="bg-gray-50">
+  <div class="row">
+    <div class="col-sm-6 col-md-1">
+    </div>
+    <div class="col-sm-6 col-md-10 text_inner">
+      <h6>Location</h6>
+      <h2>Abundant Attractions</h2>
+      <p>Cooke City has become know as a mecca of outdoor adventure because of the pristine Montana wilderness’
+        proximity to Yellowstone National Park. This gives our guests access to endless outdoor activities.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-1">
+    </div>
+    <div class="col-sm-6 col-md-10 text_inner">
+      <div class="row text_inner">
+        <div class="col-md-3 pt-4 d-flex flex-column">
+          <div class="amenities-head-text">
+            <p>Snowmobiling</p>
+          </div>
+          <div class="amenities-text">
+            <p>Rated among the top snowbiking and  snowmobiling destinations in the World.</p>
+          </div>
+        </div>
+        <div class="col-md-3 pt-4 d-flex flex-column">
+          <div class="amenities-head-text">
+            <p>Skiing</p>
+          </div>
+          <div class="amenities-text">
+            <p>The surrounding sea of mountains are a backcountry and cross country skiers’ paradise!</p>
+          </div>
+        </div>
+        <div class="col-md-3 pt-4 d-flex flex-column">
+          <div class="amenities-head-text">
+            <p>Wildlife</p>
+          </div>
+          <div class="amenities-text">
+            <p>Yellowstone’s Lamar Valley  is one of the world’s greatest wildlife-watching destinations.</p>
+          </div>
+        </div>
+        <div class="col-md-3 pt-4 d-flex flex-column">
+          <div class="amenities-head-text">
+            <p>ATV</p>
+          </div>
+          <div class="amenities-text">
+            <p>In this historic mining community, trails lead straight from town to the top of the world.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-1">
+    </div>
+  </div>
+  <div fxFill fxLayout="column" fxLayoutAlign="space-between">
+    <div fxLayout="row wrap" class="app-gallery">
+      <ng-container *ngFor="let image of data">
+        <div class="image-item">
+          <img [src]="image.url" alt="Image">
+        </div>
+      </ng-container>
+    </div>
+    <mat-paginator [length]="data2.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[4, 8, 12]"
+    (page)="getData($event)">
+    </mat-paginator>
+  </div>
+</section>
