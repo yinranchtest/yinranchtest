@@ -11,6 +11,7 @@ import { AttractionsComponent } from './app/components/attractions/attractions.c
 import { BookComponent } from './app/components/book/book.component';
 import { ReviewsComponent } from './app/components/reviews/reviews.component';
 import { BannerComponent } from './app/components/banner/banner.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 @Component({
@@ -25,7 +26,8 @@ import { BannerComponent } from './app/components/banner/banner.component';
     AttractionsComponent,
     BookComponent,
     ReviewsComponent,
-    BannerComponent
+    BannerComponent,
+    CarouselModule
   ],
   template: `
     <app-header class="mb-4"></app-header>

@@ -3,3 +3,13 @@
   height: auto;
   display: block; /* Ensures that no extra space is added below the image */
 }
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}

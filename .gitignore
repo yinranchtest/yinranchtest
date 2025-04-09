@@ -1,4 +1,5 @@
 .angular
-dist
+dist/
+docs/
 node_modules/
 .bolt
