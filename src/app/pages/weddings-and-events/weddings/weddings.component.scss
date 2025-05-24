@@ -1,0 +1,545 @@
+#weddings {
+    width: 100%;
+
+    .weddings {
+        position: relative;
+        background-image: url('../../../../assets/wedding-and-events/weddings/wedding-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(83, 85, 78, .51);
+        }
+
+        .image-content {
+            position: relative;
+            color: white;
+            z-index: 1;
+
+            h1 {
+                font-size: 4rem;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                font-family: var(--font-family-standard);
+                font-weight: var(--font-weight-sm);
+            }
+        }
+    }
+
+    .description {
+        padding: 2rem;
+
+        h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-family-standard);
+            font-weight: var(--font-weight-sm);
+            text-align: center;
+            color: #7f8179;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: var(--font-size-md);
+            color: #333;
+            font-family: var(--font-family-muli);
+            letter-spacing: .01em;
+            line-height: 1.7em;
+            color: var(--font-color-secondary)
+        }
+
+        .button-wrapper {
+            text-align: center;
+        }
+
+    }
+
+
+    #video-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+
+    .package-container {
+        max-width: 700px;
+        margin: 40px auto;
+        color: #4d4d4d;
+        background-color: #fdfdf8;
+        // padding: 2rem;
+    }
+
+    .menu-link {
+        display: inline-block;
+        color: #c26051;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        border-color: #c26051;
+        transition: border-color 0.3s ease-in-out;
+
+        &:hover {
+            color: rgba(194, 96, 81, .6);
+            border-color: rgba(194, 96, 81, .15);
+        }
+    }
+
+    .heading {
+        text-align: center;
+        font-weight: var(--font-weight-sm);
+        color: #7c7c75;
+        font-family: var(--font-family-standard);
+        font-size: 33px;
+        letter-spacing: -.01em;
+        line-height: 1.2em;
+    }
+
+    .subtext {
+        text-align: start;
+        font-size: 16px;
+        letter-spacing: .01em;
+        line-height: 1.7em;
+        text-transform: none;
+        color: var(--font-color-secondary)
+    }
+
+    .accordion-container {
+        max-width: 800px;
+        margin: auto;
+        font-family: 'Georgia', serif;
+    }
+
+    .accordion-item {
+        border-top: 1px solid #ddd;
+        padding: 1.5rem 0;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: center;
+
+        h3 {
+            font-size: 20px;
+            margin: 0;
+            letter-spacing: 2px;
+            color: var(--font-color-primary);
+            margin-left: 35%;
+        }
+
+        img {
+            width: 18px;
+        }
+
+        .icon {
+            font-size: 35px;
+            color: #ec6d5c;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+
+        .icon.open {
+            transform: rotate(180deg);
+        }
+    }
+
+    .accordion-body {
+        padding: 1rem 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+        font-family: var(--font-family-muli);
+        font-size: var(--font-size-md);
+        font-weight: 500;
+
+        ul {
+            padding-left: 1rem;
+
+            li {
+                margin-bottom: 0.5rem;
+                list-style-type: disc;
+            }
+        }
+
+        .menu-link {
+            display: inline-block;
+            color: #c26051;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            border-color: #c26051;
+            transition: border-color 0.3s ease-in-out;
+
+            &:hover {
+                color: rgba(194, 96, 81, .6);
+                border-color: rgba(194, 96, 81, .15);
+            }
+        }
+    }
+
+    .next-step {
+        max-width: 900px;
+        margin: auto;
+        color: #4d4d4d;
+        background-color: #fdfdf8;
+        // padding: 2rem;
+
+        .heading {
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button-wrapper-next {
+            text-align: center;
+            margin: 30px 0px;
+        }
+
+    }
+
+    .awards-recognition {
+        max-width: 900px;
+        margin: 40px auto;
+        color: #4d4d4d;
+        background-color: #fdfdf8;
+
+        p {
+            text-align: center;
+            margin: 8px;
+            font-style: normal;
+            font-size: 16px;
+            letter-spacing: .01em;
+            line-height: 1.7em;
+            text-transform: none;
+            color: #282a29;
+        }
+
+        .image-wrapper {
+            margin-top: 20px;
+            text-align: center;
+
+            img {
+                width: 400px;
+            }
+        }
+
+    }
+
+    .blog-section {
+        max-width: 900px;
+        margin: 40px auto;
+        color: #4d4d4d;
+        background-color: #fdfdf8;
+        text-align: center;
+
+        .section-title {
+            font-size: 1.75rem;
+            color: #5e5e5e;
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+            font-family: 'Georgia', serif;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .blog-card {
+                background: #fff;
+                border-radius: 4px;
+                width: 300px;
+                text-align: left;
+
+                img {
+                    width: 100%;
+                    height: 280px;
+                    border-radius: 4px;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    color: #d88b8b;
+                    font-size: 18px;
+                    margin: 1rem 0 0.5rem;
+                    font-family: var(--font-family-standard);
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    color: var(--font-color-primary);
+                    margin-bottom: 1.5rem;
+                }
+
+                .read-more {
+                    background-color: #53554e;
+                    color: #fff;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    cursor: pointer;
+                    font-size: 0.85rem;
+                    text-transform: uppercase;
+                    border-radius: 2px;
+
+                    &:hover {
+                        background-color: #7f8179;
+                    }
+                }
+            }
+        }
+    }
+
+    .divider {
+        margin: 4rem auto;
+        width: 90%;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .review-section {
+        text-align: center;
+        padding: 0rem 0rem 1rem 1rem;
+        background-color: #fffdf8;
+
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            border-top: 1px solid #ccc;
+            padding-top: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .review-widget {
+            background: #f0f2f5;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 4px;
+
+            .review-header {
+                display: flex;
+                justify-content: space-between;
+                font-weight: bold;
+                font-size: 1rem;
+
+
+                .stars {
+                    color: gold;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .subtext {
+                font-size: 0.9rem;
+                color: #666;
+                text-align: left;
+                margin: 0px;
+
+                a {
+                    color: #00bcd4;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .review-card {
+                background: #fff;
+                border-radius: 6px;
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                text-align: left;
+
+                .score {
+                    color: #444;
+                    margin-left: 0.4rem;
+                    font-weight: normal;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #333;
+                    margin: 0px;
+
+                    a {
+                        color: #00bcd4;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+
+            .footer {
+                text-align: center;
+                font-size: 0.9rem;
+                // margin-top: 1rem;
+
+                p {
+                    margin: 0px;
+                }
+
+                a {
+                    color: #00bcd4;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                img {
+                    display: block;
+                    margin: 0.5rem auto 0;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+.wedding-modal {
+    font-family: var(--font-family-muli);
+    background-color: #ffffff;
+
+    .modal-header {
+        border-bottom: 1px solid #ddd;
+
+        h5 {
+            margin: 0 auto;
+            color: #555;
+            font-weight: 500;
+            font-family: var(--font-family-standard);
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .btn-close {
+            margin-left: 0;
+        }
+    }
+
+    .modal-body {
+        color: #444;
+
+        input {
+            color: rgb(0, 0, 0);
+            background-color: rgb(250, 250, 250);
+            border: 1px solid rgb(169, 169, 169);
+            height: auto;
+            padding: 10px;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .instruction {
+            font-size: 0.95rem;
+            color: var(--font-color-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--font-color-secondary);
+            span{
+                font-size: 12px;
+                font-weight: var(--font-weight-sm);
+            }
+        }
+
+        .required {
+            color: red;
+        }
+
+        .form-control {
+            border-radius: 0;
+        }
+
+        .form-check-label {
+            font-size: 0.9rem;
+        }
+
+        .btn-submit {
+            background-color: #f28d7c;
+            color: #222;
+            border: none;
+            border-radius: 0;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            padding: 0.75rem 2rem;
+            // width: 200px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #e87c6a;
+                color: white;
+            }
+        }
+
+
+        /* Custom checkbox */
+        .form-check-input {
+            width: 16px;
+            height: 16px;
+            border-radius: 0;
+            border: 1px solid rgb(169, 169, 169);
+            margin-top: 0.3rem;
+            cursor: pointer;
+
+            &:checked {
+                background-color: #000;
+                border: 1px solid rgb(169, 169, 169);
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .form-check {
+            input {
+                padding: 7px;
+            }
+        }
+
+        .form-check-label {
+            margin-left: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+    }
+}

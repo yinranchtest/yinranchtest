@@ -1,0 +1,47 @@
+<header>
+    <div class="top-header-container">
+        <div [routerLink]="['/']">
+            <h1 class="logo">Yin Ranch</h1>
+            <!-- <img src="assets/header/park_winters_logo_BLACK.jpg" /> -->
+        </div>
+        <div>
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" [routerLink]="['/media']">MEDIA</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="weddingsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    WEDDINGS & EVENTS
+                                </a>
+                                <ul class="dropdown-menu custom-dropdown" aria-labelledby="weddingsDropdown">
+                                    <li><a class="dropdown-item" [routerLink]="['/weddings']">WEDDINGS</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/wedding-gallery']">WEDDING GALLERY</a></li>
+                                    <li><a class="dropdown-item" href="#">CORPORATE EVENTS</a></li>
+                                    <li><a class="dropdown-item" href="#">SPECIAL OCCASIONS</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#">THE INN</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">FLOWER FARM</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/brunch']">BRUNCH</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">DAY VISITS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>

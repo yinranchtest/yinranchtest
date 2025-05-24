@@ -1,0 +1,5 @@
+.angular
+dist/
+docs/
+node_modules/
+.bolt

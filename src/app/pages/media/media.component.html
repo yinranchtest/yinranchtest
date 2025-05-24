@@ -1,0 +1,44 @@
+<div id="media">
+    <h1>yin ranch on youtube</h1>
+    <img class="media-cover" src="assets/media/media_1.jpg" />
+
+    <div class="youtube-description">
+        <hr />
+        <div class="button-container">
+            <button class="custom-button">YOUTUBE CHANNEL</button>
+        </div>
+        <h3>The Yin Ranch Story On YouTube...</h3>
+        <p>Exciting News! yin ranch is Now on YouTube! </p>
+        <p>We're thrilled to announce the launch of the official —
+            <strong> yin ranch YouTube Channel!</strong>
+        </p>
+        <p>For years, you've been part of our journey, and now we have a new way to share the magic with you. On our
+            channel, you'll get an exclusive look at yin ranch was created, where we are today, and where we're
+            headed in the future.
+        </p>
+        <p>From behind-the-scenes moments to exciting updates, we can't wait to keep in touch with you and share all
+            the wonderful things happening at yin ranch.
+        </p>
+        <p>We'd love for you to be part of this adventure! Please help us grow by subscribing and sharing with friends.
+            Click the link below to subscribe and stay connected. Thank you for your support—we can't wait to share this
+            journey with you! Tune in every Wednesday at 11 AM for our latest videos.
+        </p>
+
+        <div class="youtube-videos-container">
+            <div class="videos" *ngFor="let videos of allVideos">
+                <iframe width="100%" height="500" [src]="videos" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <span><img src="assets/footer/instagram.png" /></span>
+            <span><img src="assets/footer/facebook.png" /></span>
+            <span><img src="assets/footer/pinterest.png" /></span>
+            <span><img src="assets/footer/youtube.png" /></span>
+            <span><img src="assets/footer/yelp.png" /></span>
+        </div>
+    </div>
+</div>
