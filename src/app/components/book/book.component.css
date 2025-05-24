@@ -1,0 +1,28 @@
+.text_book {
+  /* Padding for the element */
+  background-color: #f8f9fa; /* Light background color */
+  text-align: left; /* Left align the text */
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+.text_inner h6 {
+  text-transform: uppercase; /* Uppercase for the h6 */
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.text_inner h2 {
+  font-size: 2.5rem; /* Adjust the font size for the h2 */
+}
+
+/* Style for rounded bullets */
+ul.rounded-bullets {
+  list-style-type: disc; /* Ensures it's a disc-style bullet */
+  padding-left: 20px;    /* Adds space to the left for the bullets */
+}
+
+ul.rounded-bullets li {
+  list-style-position: inside; /* Ensures the bullet is inside the list item */
+  margin-bottom: 8px; /* Adds spacing between items */
+}

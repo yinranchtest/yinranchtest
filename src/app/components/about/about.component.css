@@ -1,0 +1,24 @@
+.text_inner {
+  padding: 15px; /* Padding for the element */
+  background-color: #f8f9fa; /* Light background color */
+  text-align: left; /* Left align the text */
+  line-height: 1.8;
+}
+
+.text_inner h6 {
+  text-transform: uppercase; /* Uppercase for the h6 */
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.text_inner h2 {
+  font-size: 3rem; /* Adjust the font size for the h2 */
+}
+
+.circular-image {
+  width: 80px;  /* Set fixed width */
+  height: 80px; /* Set fixed height to ensure the circle remains proportional */
+  border-radius: 50%;  /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  margin-left: 15px;  /* Center the image within its parent */
+}
