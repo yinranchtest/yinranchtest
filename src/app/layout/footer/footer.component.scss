@@ -68,6 +68,7 @@
             padding: 12px 45px;
             font-size: 13px;
             font-family: var(--font-family-muli);
+            margin-bottom: 30px;
         }
     }
 }
@@ -149,4 +150,32 @@
         background: #ccc;
         margin: 30px 0;
     }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  width: 43%;
+  margin-top: 1px;
+
+}
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #5b5959;
+  margin-right: 89%;
+ font-size: var(--font-size-md);
+
+
+}
+
+.contact-form textarea {
+  resize: none;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
 }

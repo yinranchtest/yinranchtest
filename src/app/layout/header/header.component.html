@@ -27,13 +27,34 @@
                                 <ul class="dropdown-menu custom-dropdown" aria-labelledby="weddingsDropdown">
                                     <li><a class="dropdown-item" [routerLink]="['/weddings']">WEDDINGS</a></li>
                                     <li><a class="dropdown-item" [routerLink]="['/wedding-gallery']">WEDDING GALLERY</a></li>
-                                    <li><a class="dropdown-item" href="#">CORPORATE EVENTS</a></li>
-                                    <li><a class="dropdown-item" href="#">SPECIAL OCCASIONS</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/corporate-events']">CORPORATE EVENTS</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/special-occasions']">SPECIAL OCCASIONS</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item"><a class="nav-link" href="#">THE INN</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">FLOWER FARM</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="theInnDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    THE INN
+                                </a>
+                                <ul class="dropdown-menu custom-dropdown" aria-labelledby="theInnDropdown">
+                                    <li><a class="dropdown-item" [routerLink]="['/the-inn']">ROOMS AT THE INN</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/amenities']">AMENITIES</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/photos']">PHOTO TOUR</a></li>
+                                </ul>
+                            </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="flowerFarmDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                   FLOWER FORM
+                                </a>
+                                <ul class="dropdown-menu custom-dropdown" aria-labelledby="flowerFarmDropdown">
+                                    <li><a class="dropdown-item" [routerLink]="['/flower-farm']">FLOWER FARM</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/pavilion']">FLOWER FARM PAVILION</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/corporate-events']">PPP</a></li>
+                                    <li><a class="dropdown-item" [routerLink]="['/special-occasions']">SPECIAL OCCASIONS</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['/flower-farm']">FLOWER FARM</a></li> -->
                             <li class="nav-item"><a class="nav-link" [routerLink]="['/brunch']">BRUNCH</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">DAY VISITS</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>

@@ -1,0 +1,208 @@
+.hero {
+    background: url('/assets/images/gallery/yinranch_gallery-9.jpg') no-repeat center;
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    color: white;
+    position: relative;
+     width: 100vw; 
+    font-family: var(--font-family-standard);
+    width: 100%;
+
+}
+
+
+    .hero-content {
+        margin-top: auto;
+        z-index: 1;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 52px;
+        line-height: 1.2;
+    }
+
+    p {
+        margin-top: auto;
+        font-size: 20px;
+        font-family: var(--font-family-muli);
+    }
+
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 20px;
+}
+
+.scroll-track {
+  display: flex;
+}
+
+.image-card {
+  min-width: 300px;
+}
+
+.image-card img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.caption-text{
+    text-wrap: wrap;
+}
+.info-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 200px; 
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.info-box {
+  width: 200px; 
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.info-box img {
+  height: 90px;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.info-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+.info-box p {
+  font-size: 14px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-box:hover img,
+.info-box:hover h3,
+.info-box:hover p {
+  transform: scale(1.08);
+}
+
+
+.home{
+        font-size: 48px;
+        letter-spacing: 0;
+        padding-top: 0;
+        font-family: Ortica Light, serif;
+        text-align: center;
+        color: rgb(129, 139, 139);
+        margin-top: 90px;
+}
+.text{
+    margin-top: 30px;
+    text-align: center;
+    color:rgb(86, 89, 89) ;
+     font-family: Ortica Light, serif;
+}
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.image-wrapper img {
+   width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+.estate-section {
+  background-color: #fdfbf6;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.estate-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.estate-image-wrapper img {
+  width: 70%;
+  // max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin: 30px;
+}
+
+.estate-description p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+.image-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fdfbf6;
+  padding: 20px 0;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 40s linear infinite;
+}
+
+.scrolling-wrapper img {
+  height: 350px;
+  width: 20%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+

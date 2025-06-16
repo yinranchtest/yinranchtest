@@ -1,0 +1,344 @@
+.the-inn{
+    position: relative;
+    width: 100vw; 
+    height: 600px;
+    background-image: url('../../../assets/home/image52.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 200px;
+    box-sizing: border-box;
+}
+
+.the-inn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(85, 79, 79, 0.4); 
+    z-index: 1;
+}
+.events{
+    font-family: var(--font-family-standard);
+    font-weight: var(--font-weight-sm);
+    font-style: normal;
+    font-size: 59px;
+    color: #fffffa;
+    letter-spacing: .06em;
+    line-height: 3.3em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text{
+    font-family: var(--font-family-standard);
+    font-weight: var(--font-weight-sm);
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 0;
+    color: #7f8179;
+    font-weight: 400; 
+    letter-spacing: -.01em;
+    line-height: 1.2em;
+    text-transform: none;
+    text-align: center;
+    margin-top: 50px;
+
+}
+.party{
+     font-family:var( --font-family-muli);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .01em;
+    line-height: 1.7em;
+    text-transform: none;
+    color: #282a29;
+    padding-left: 16%;
+    padding-right: 16%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+   
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.event-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background-color: #e87d6d;
+  color: rgb(35, 33, 33);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+
+}
+.event-button:hover {
+  background-color: #d76c5f;
+}
+.video-container {
+
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.video-container iframe {
+  width: 100px;
+  height: 600px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 990px;
+  margin-top: 20px;
+}
+.room {
+  color: #7f8179;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+  letter-spacing: -0.01em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-family: var(--font-family-standard);
+  margin-left: 15%;
+  margin-top: 40px;
+}
+.top{
+  color: #4a4a4a;
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: var(--font-family-muli);
+  margin: 20px 50px;
+  max-width: 700px;
+  margin-left: 15%;
+}
+.rate{
+    color: #555252;
+      margin: 20px 50px;
+  max-width: 700px;
+  margin-left: 15%;
+  margin-top: 30px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.based{
+ color: #8c8787;
+      margin: 20px 50px;
+  max-width: 700px;
+  margin-left: 15%;
+  margin-top: 30px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.room-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 60px 15%;
+  gap: 40px;
+}
+
+.room-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.room-carousel {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 10%;
+}
+
+ngb-carousel.carousel {
+  width: 100%;
+  max-width: 600px;
+}
+::ng-deep ngb-carousel .carousel-indicators {
+  display: none !important;
+}
+.line{
+width: 70%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 90px;
+   
+}
+    .img {
+  display: block;
+  margin: 50px auto; 
+  object-fit: cover;
+  width: 70%;
+  height: auto; 
+}
+
+
+.gallery-section {
+    width: 100%;
+    display: flex;
+  justify-content: center;
+margin-top: 50px;
+    .row {
+      width: 100%;
+      max-width: 900px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+     justify-content: center; 
+      flex-wrap: wrap;
+      padding: 0 4px;
+       margin: 0 auto;
+    }
+
+    .column {
+      -ms-flex: 25%;
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.tripadvisor-card {
+  border: 1.5px solid #4cd290;
+  max-width: 290px;
+  padding: 20px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin-left: 25%;
+}
+
+.tripadvisor-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tripadvisor-header .logo {
+  width: 30px;
+  height: auto;
+}
+
+.tripadvisor-header h2 {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+}
+
+.rating-section {
+  margin-top: 10px;
+}
+
+.rating-title {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.circle.filled {
+  background-color: #4cd290;
+}
+
+.review-count {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.ranking {
+  margin-top: 15px;
+}
+
+.rank-label {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ranking h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.reviews {
+  margin-top: 15px;
+}
+
+.reviews p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reviews ul {
+  padding-left: 15px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.reviews li {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.links {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.links a {
+  color: #000;
+  text-decoration: underline;
+  margin: 0 5px;
+}

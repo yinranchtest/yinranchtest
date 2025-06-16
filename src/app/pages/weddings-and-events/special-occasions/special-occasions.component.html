@@ -1,0 +1,97 @@
+<div class="special">
+<h2 class="events">SPECIAL OCCASIONS</h2>
+</div>
+<h2 class="text">MAKE IT MEMORABLE</h2>
+<h6 class="party">Celebrate a birthday, anniversary, baby or bridal shower, bachelorette or family gathering at Yin Ranch. Our beautiful historical Inn, 
+    elegant white barn, and lush grounds create a
+     memorable and unique event space for any celebration. Gather with friends and family for a
+      special occasion dinner created by our chefs using local, farm-fresh ingredients. Our event space can accommodate 
+      indoor and outdoor celebrations throughout the seasons.
+      Whether you’d like to host an intimate gathering or big birthday bash, 
+    yin ranch is the perfect place to celebrate.</h6>
+    <div class="button-container">
+  <a href="#" routerLink="/event-inquiry" class="event-button">EVENT INQUIRY</a>
+</div>
+ <div class="accordion-container">
+                <div class="accordion-item"
+                    *ngFor="let section of ['VENUE', 'CATERING', 'DESIGN AND DECOR', 'BAR SERVICE']">
+                    <div class="accordion-header" (click)="toggleSection(section)">
+                        <h3>{{ section }}</h3>
+                        <span class="icon" [class.open]="isOpen(section)">
+                            {{ isOpen(section) ? '-' : '+' }}
+                        </span>
+                    </div>
+
+                    <div class="accordion-body" [@slideToggle]="isOpen(section) ? 'open' : 'closed'">
+                        <ng-container [ngSwitch]="section">
+                            <!-- VENUE -->
+                            <ul *ngSwitchCase="'VENUE'">
+                                
+                                <li>10 hours of exclusive event space use</li>
+                                <li> Idyllic gardens with endless ceremony and reception options</li>
+                                <li>Elegant indoor event barn</li>
+                                <li>Restored historical Inn</li>
+                                <li> Organic farm</li>
+                                <li>Organic farm, sleek pool, fire pit</li>
+                                <li>Beautiful dressing rooms for Bride and Groom</li>
+                                <li>State-of-the-art sound system</li>
+                                <li> Guest restrooms</li>
+                                <li>Commercial backup generator with the ability to power entire event space in case of a power outage </li>
+                                <li> Large parking lot, featuring three Tesla chargers</li>
+                                <li>Overnight accommodations available for additional fees</li>
+                            </ul>
+
+                            <!-- CATERING -->
+                            <div *ngSwitchCase="'CATERING'">
+                                <ul>
+                                    <li>Award-winning chef and kitchen staff</li>
+                                    <li>Professional service waitstaff</li>
+                                    <li>Complimentary cake cutting</li>
+                                    <li>All dinnerware, glassware and flatware</li>
+                                </ul>
+                                <a class="menu-link">View Seasonal Buffet Menu</a><br>
+                                <a class="menu-link">View Seasonal Plated Menu</a>
+                            </div>
+
+                            <!-- DESIGN AND DECOR -->
+                            <ul *ngSwitchCase="'DESIGN AND DECOR'">
+                                <li>Year-round climate controlled spaces</li>
+                                <li>Romantic market lights strung above courtyard</li>
+                                <li>Attractive white ceremony and dinner chairs with padded seats</li>
+                                <li>Choice of round and rectangular dinner tables</li>
+                                <li>High quality floor-length white table linens</li>
+                                <li>Furnished lounge spaces</li>
+                            </ul>
+
+                            <!-- BAR SERVICE -->
+                            <div *ngSwitchCase="'BAR SERVICE'">
+                                <ul>
+                                    <li>Pricing based on consumption</li>
+                                    <li>Wine selection of two whites, two reds and one sparkling</li>
+                                    <li>Eight beer selections in a variety of styles</li>
+                                    <li>Full cocktail bar with eight spirits including liquors, cordials</li>
+                                    <li>Customized signature cocktails available</li>
+                                    <li>Unlimited complimentary non-alcoholic beverages</li>
+                                    <li>Service of beer and wine if you wish to bring your own</li><br />
+                                    ($20 wine corkage / $300 per keg)
+                                </ul>
+                                <a class="menu-link">View Bar Package Selection</a><br>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <hr class="line">
+            <h2 class="text">LET'S TALK!</h2>
+<h6 class="form">Please fill out the form below and we will contact you shortly. Thank you!</h6>
+
+  <div class="button-container">
+  <a href="#" routerLink="/event-inquiry" class="event-button">EVENT INQUIRY</a>
+</div>
+<hr class="line">
+<section class="brunch-section">
+  <div class="image-grid">
+    <img src="../../../assets/brunch/image64.jpg" class="image-brunch" alt="brunch1">
+    <img src="../../../assets/brunch/image73.jpg" class="image-brunch" alt="brunch2">
+     <img src="../../../assets/brunch/image62.jpg" class="image-brunch" alt="brunch2">
+  </div>
