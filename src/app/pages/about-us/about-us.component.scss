@@ -1,0 +1,122 @@
+.founders-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: #fdfcf7;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 100px;
+
+    .content {
+        max-width: 400px;
+        text-align: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #3d4b37;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #555;
+            line-height: 1.5;
+        }
+    }
+
+    .image-box {
+        border-radius: 1rem;
+        overflow: hidden;
+        width: 450px;
+        height: 450px;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.staff-section {
+    padding: 40px;
+    background-color: #f2f1ed;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+        justify-items: center;
+        margin-top: 20px;
+    }
+
+    .staff-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 200px;
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .staff-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .envelope-container {
+                padding: 4px;
+                background-color: #6378A2;
+                border-radius: 5px;
+
+                i {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #222;
+            }
+        }
+
+        .role {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 100%;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #444;
+            text-align: start;
+            flex-wrap: wrap;
+
+            .email-icon {
+                width: 16px;
+                height: 16px;
+                background-size: contain;
+                display: inline-block;
+            }
+        }
+    }
+}

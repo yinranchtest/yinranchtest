@@ -1,11 +1,9 @@
-<nav class="navbar">
+<nav class="navbar" [class.scrolled]="isScrolled || isNonHomeRoute">
     <div>
-        <div class="logo">YIN RANCH</div>
+        <div class="logo" [routerLink]="['/']">YIN RANCH</div>
         <ul class="nav-links">
-            <li><a href="#">About</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/about-us']">About us</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
