@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class RoomAttheInnComponent {
 images = [
-    '../../../assets/brunch/image69.jpg',
-    '../../../assets/brunch/image70.jpg',
-    '../../../assets/brunch/image71.jpg'
+    'assets/brunch/image69.jpg',
+    'assets/brunch/image70.jpg',
+    'assets/brunch/image71.jpg'
   ];
 }

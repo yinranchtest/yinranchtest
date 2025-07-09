@@ -12,9 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class TheInnComponent {
   images = [
-    '../../../assets/brunch/image69.jpg',
-    '../../../assets/brunch/image70.jpg',
-    '../../../assets/brunch/image71.jpg'
+    'assets/brunch/image69.jpg',
+    'assets/brunch/image70.jpg',
+    'assets/brunch/image71.jpg'
   ];
 }
 
