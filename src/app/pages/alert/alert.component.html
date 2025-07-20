@@ -1,0 +1,4 @@
+<div *ngIf="alert" class="alert alert-{{ alert.type }} d-flex align-items-center" role="alert">
+  <i [ngClass]="iconClass(alert.type)" class="me-2"></i>
+  <div>{{ alert.message }}</div>
+</div>

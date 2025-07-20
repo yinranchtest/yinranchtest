@@ -1,0 +1,161 @@
+.stepper-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 90px;
+
+  .stepper {
+    position: relative;
+
+    .step {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      &.active .circle,
+      &.completed .circle {
+        background-color: #db9c84;
+        color: #fff;
+      }
+
+      &.active .line,
+      &.completed .line {
+        background-color: #db9c84;
+      }
+
+      .circle {
+        background-color: #fff;
+        border: 2px solid #db9c84;
+        color: #db9c84;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .line {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background-color: #ccc;
+        margin-left: -2px;
+        margin-right: -2px;
+      }
+
+      &.active .circle {
+        background-color: #db9c84;
+        color: #fff;
+      }
+
+      &.active .line {
+        background-color: #db9c84;
+      }
+
+      &:last-child .line {
+        display: none;
+      }
+    }
+  }
+
+  .step-content {
+    padding: 0px 100px;
+
+    small {
+      color: red;
+    }
+
+    .form-label {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    select {
+      padding: 8px 6px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  }
+
+  .custom-button-form {
+    background-color: #db9c84;
+    color: white;
+    border: none;
+    padding: 6px 13px 6px 13px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f2f0e9;
+    padding: 2rem;
+    margin: 0px 100px;
+
+    .contact-info {
+      flex: 1 1 40%;
+      color: #1d3d3f;
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #1d3d3f;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #3e3e3e;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .icon {
+          border-right: 2px solid;
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+        }
+
+        i {
+          margin-right: 10px;
+          font-size: 20px;
+          color: #ba9b62;
+        }
+
+        a {
+          text-decoration: underline;
+          color: #1d3d3f;
+        }
+      }
+    }
+
+    .map-container {
+      flex: 1 1 50%;
+      height: 300px;
+      border: 1px solid #ccc;
+
+      agm-map {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+}

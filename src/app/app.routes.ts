@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { WrapperComponent } from './layout/wrapper/wrapper.component';
 import { YinRanchHomeComponent } from './pages/yin-ranch-home/yin-ranch-home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [{
     path: '',
@@ -11,6 +12,7 @@ export const routes: Routes = [{
         // { path: '', component: HomeComponent },
         { path: '', component: YinRanchHomeComponent },
         { path:'about-us',component:AboutUsComponent},
+        { path:'contact-us',component:ContactComponent}
 
         // { path: 'media', component: MediaComponent },
         // { path: 'weddings', component: WeddingsComponent },

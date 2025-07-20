@@ -62,9 +62,24 @@ body {
     cursor: pointer;
     font-style: normal;
 
-    &:hover{
+    &:hover {
         transition: background-color 0.3s ease;
         opacity: .8;
-            transition: .1s opacity linear;
+        transition: .1s opacity linear;
+    }
+}
+
+.custom-button-action {
+    background-color: #e6a68d;
+    color: white;
+    border: none;
+    padding: 6px 13px 4px 13px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: var(--font-family-standard);
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.1s linear;
     }
 }
