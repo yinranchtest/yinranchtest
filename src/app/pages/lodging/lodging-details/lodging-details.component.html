@@ -1,0 +1,77 @@
+<div class="lodging-detail-page container mt-5" *ngIf="!contactLodging">
+
+    <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
+        <b>Interested?</b> <b>Book a free tour now</b>
+        <button class="contact-button" (click)="contactLodging = true">Contact Us</button>
+    </div>
+
+    <div class="lodging-header">
+        <h2 class="lodging-title">Poppy, bright and cheerful space</h2>
+        <p class="lodging-location text-muted mb-4">Toronto - Canada</p>
+
+        <div class="d-flex justify-content-evenly gap-5">
+            <div class="lodging-info d-flex flex-column flex-wrap justify-content-start gap-4">
+                <div><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>
+                <div><i class="bi bi-door-closed me-2"></i> 1.5 Bathrooms</div>
+                <div><i class="bi bi-laptop me-2"></i> 2 Workspaces</div>
+            </div>
+            <div class="lodging-info d-flex flex-column flex-wrap justify-content-start gap-4">
+                <div><i class="bi bi-moon me-2"></i> 1 Bed</div>
+                <div><i class="bi bi-people-fill me-2"></i> 2 Guest max</div>
+                <div><i class="bi bi-people-fill me-2"></i> Pets on request</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="lodging-extra-info container" *ngIf="contactLodging">
+
+    <div class="amenities-section mb-5">
+        <h4 class="section-title mb-3"><b>Amenities</b></h4>
+        <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
+            <div class="col"><i class="bi bi-wifi"></i> 1000-250 Mbps internet Good</div>
+            <div class="col"><i class="bi bi-car-front"></i> Parking - Paid street</div>
+            <div class="col"><i class="bi bi-sun"></i> Patio or balcony</div>
+            <div class="col"><i class="bi bi-snow2"></i> Air conditioning</div>
+            <div class="col"><i class="bi bi-tv"></i> TV</div>
+            <div class="col"><i class="bi bi-columns-gap"></i> Curtains or shades in bedrooms</div>
+            <div class="col"><i class="bi bi-thermometer-half"></i> Heating</div>
+            <div class="col"><i class="bi bi-droplet-half"></i> Washer - In unit</div>
+            <div class="col"><i class="bi bi-box-seam"></i> Dryer - In unit</div>
+            <div class="col"><i class="bi bi-box"></i> Iron</div>
+            <div class="col"><i class="bi bi-droplet"></i> Dishwasher</div>
+            <div class="col"><i class="bi bi-scissors"></i> Hair dryer</div>
+            <div class="col"><i class="bi bi-cup-hot"></i> Coffee or espresso maker</div>
+        </div>
+    </div>
+
+    <!-- <div class="d-flex justify-content-start align-items-center"> -->
+        <div class="before-you-book-section">
+            <h5 class="section-title mb-3">Before you book</h5>
+
+            <div class="booking-note mb-3">
+                <p class="fw-semibold mb-1"><i class="bi bi-door-closed me-2"></i>My home requires climbing stairs
+                </p>
+                <ul class="ps-4 mb-2">
+                    <li>Step-free to home entrance</li>
+                    <li>My home has 2 floors</li>
+                </ul>
+            </div>
+
+            <div class="booking-note">
+                <p class="fw-semibold mb-1"><i class="bi bi-door-closed me-2"></i>My dog lives in this home</p>
+                <p class="mb-0 mx-4">They will not be home while guests stay.</p>
+                <small class="text-muted mx-4">Not hypoallergenic <i class="bi bi-question-circle ms-1"></i></small>
+            </div>
+        </div>
+
+        <div class="before-you-book-section mt-4">
+            <h5 class="section-title mb-3">Location</h5>
+            <google-map height="500px" width="100%" [center]="center" [zoom]="15">
+                <map-marker [position]="center"></map-marker>
+            </google-map>
+
+        </div>
+    <!-- </div> -->
+
+</div>

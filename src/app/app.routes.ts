@@ -4,6 +4,8 @@ import { WrapperComponent } from './layout/wrapper/wrapper.component';
 import { YinRanchHomeComponent } from './pages/yin-ranch-home/yin-ranch-home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LodgingComponent } from './pages/lodging/lodging/lodging.component';
+import { LodgingDetailsComponent } from './pages/lodging/lodging-details/lodging-details.component';
 
 export const routes: Routes = [{
     path: '',
@@ -11,8 +13,10 @@ export const routes: Routes = [{
     children: [
         // { path: '', component: HomeComponent },
         { path: '', component: YinRanchHomeComponent },
-        { path:'about-us',component:AboutUsComponent},
-        { path:'contact-us',component:ContactComponent}
+        { path: 'about-us', component: AboutUsComponent },
+        { path: 'contact-us', component: ContactComponent },
+        { path: 'lodging', component: LodgingComponent },
+        { path: 'lodging-detail', component: LodgingDetailsComponent }
 
         // { path: 'media', component: MediaComponent },
         // { path: 'weddings', component: WeddingsComponent },

@@ -79,10 +79,12 @@ export class ContactComponent implements OnInit {
         this._alertService.showAlert(response.message, 'success');
         this.contactForm.reset()
         this.currentStep = 1
+        this.submitted = false
       },
       ({ error }: any) => {
         console.log(error)
         this._alertService.showAlert(error.message, 'danger');
+        this.submitted = false
       }
     )
   }
