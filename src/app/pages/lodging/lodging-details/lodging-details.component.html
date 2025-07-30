@@ -1,8 +1,9 @@
-<div class="lodging-detail-page container mt-5" *ngIf="!contactLodging">
+<div class="lodging-detail-page container mt-5">
 
     <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
         <b>Interested?</b> <b>Book a free tour now</b>
-        <button class="contact-button" (click)="contactLodging = true">Contact Us</button>
+        <!-- <button class="contact-button" (click)="contactLodging = true">Contact Us</button> -->
+        <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
     </div>
 
     <div class="lodging-header">
@@ -24,7 +25,7 @@
 
     </div>
 </div>
-<div class="lodging-extra-info container" *ngIf="contactLodging">
+<div class="lodging-extra-info container">
 
     <div class="amenities-section mb-5">
         <h4 class="section-title mb-3"><b>Amenities</b></h4>

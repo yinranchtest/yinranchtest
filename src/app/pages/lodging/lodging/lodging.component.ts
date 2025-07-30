@@ -14,18 +14,18 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class LodgingComponent implements OnInit {
   venues = [
-    { name: 'CASA DEL RIO', image: '/assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: '/assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: '/assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: '/assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: '/assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: '/assets/resort/lodging.jpg', capacity: 120 },
-    { name: 'CASA DEL RIO', image: '/assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: '/assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: '/assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: '/assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: '/assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: '/assets/resort/lodging.jpg', capacity: 120 },
+    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
+    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
+    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
+    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
+    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
+    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
+    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
+    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
+    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
+    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
+    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
+    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
   ];
   constructor(private router: Router) { }
   ngOnInit(): void {
