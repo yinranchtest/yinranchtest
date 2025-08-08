@@ -1,56 +1,62 @@
 <div class="hero">
-    <div class="hero-content">
-        <h1>Introducing Clove, a<br />mental health collective.</h1>
-        <p>
-            Get accessible and personalized mental healthcare in-person or<br />
-            from the comfort of your home.
-        </p>
-    </div>
-</div>
-<div #scrollContainer class="scroll-container" (mouseenter)="pauseScroll()" (mouseleave)="resumeScroll()">
-  <div class="scroll-track d-flex">
-    <div *ngFor="let item of images" class="image-card mx-2 text-center">
-      <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
-      <p class="mt-2 caption-text">{{ item.caption }}</p>
-    </div>
-
-    <!-- Duplicate to enable infinite scroll -->
-    <div *ngFor="let item of images" class="image-card mx-2 text-center">
-      <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
-      <p class="mt-2 caption-text">{{ item.caption }}</p>
-    </div>
+  <div class="hero-content">
+    <h1>Introducing Clove, a<br />mental health collective.</h1>
+    <p>
+      Get accessible and personalized mental healthcare in-person or<br />
+      from the comfort of your home.
+    </p>
   </div>
 </div>
+
+<div class="image-scroll-container">
+  <button class="scroll-btn prev" (click)="scrollPrev()"><i class="bi bi-chevron-left"></i></button>
+
+  <div #scrollWrapper class="scrolling-wrapper" (mouseenter)="pauseAutoScroll()" (mouseleave)="resumeAutoScroll()">
+    <div class="scroll-track d-flex">
+      <div *ngFor="let item of images" class="image-card mx-2 text-center">
+        <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
+        <p class="mt-2 caption-text">{{ item.caption }}</p>
+      </div>
+      <div *ngFor="let item of images" class="image-card mx-2 text-center">
+        <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
+        <p class="mt-2 caption-text">{{ item.caption }}</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-btn next" (click)="scrollNext()"><i class="bi bi-chevron-right"></i></button>
+</div>
+
 <div>
   <div class="info-section">
-  <div class="info-box">
-    <img src="assets/header/CAPACITY.png" alt="Capacity Icon" />
-    <h3>CAPACITY</h3>
-    <p>Upto 400</p>
+    <div class="info-box">
+      <img src="assets/header/CAPACITY.png" alt="Capacity Icon" />
+      <h3>CAPACITY</h3>
+      <p>Upto 400</p>
+    </div>
+    <div class="info-box">
+      <img src="assets/header/SETTING.png" alt="Setting Icon" />
+      <h3>SETTING</h3>
+      <p>Backyard, Garden, Mountain, Park, Tented, Trees</p>
+    </div>
+    <div class="info-box">
+      <img src="assets/header/CATERING.png" alt="Catering Icon" />
+      <h3>CATERING</h3>
+      <p>In-house</p>
+    </div>
+    <div class="info-box">
+      <img src="assets/header/AMPLIFIED-MUSIC.png" alt="Amplified Music Icon" />
+      <h3>AMPLIFIED MUSIC</h3>
+      <p>Indoors</p>
+    </div>
   </div>
-  <div class="info-box">
-    <img src="assets/header/SETTING.png" alt="Setting Icon" />
-    <h3>SETTING</h3>
-    <p>Backyard, Garden, Mountain, Park, Tented, Trees</p>
-  </div>
-  <div class="info-box">
-    <img src="assets/header/CATERING.png" alt="Catering Icon" />
-    <h3>CATERING</h3>
-    <p>In-house</p>
-  </div>
-  <div class="info-box">
-    <img src="assets/header/AMPLIFIED-MUSIC.png" alt="Amplified Music Icon" />
-    <h3>AMPLIFIED MUSIC</h3>
-    <p>Indoors</p>
-  </div>
-</div>
 
   <h1 class="home">WELCOME HOME.</h1>
   <h4 class="text">Flamingo Estate is my home and garden. But it’s more than that, too.
-     It’s the<br> story of a lush orchard and pleasure garden on a California hillside <br>overlooking
-      Los Angeles, and the many hands that have helped tend it.<br> It’s a philosophy that champions
-       slow ways and ancient practices. It’s a quest for <br> intimacy — between plants and people,
-        body and spirit, heaven and earth.
+    It’s the<br> story of a lush orchard and pleasure garden on a California hillside <br>overlooking
+    Los Angeles, and the many hands that have helped tend it.<br> It’s a philosophy that champions
+    slow ways and ancient practices. It’s a quest for <br> intimacy — between plants and people,
+    body and spirit, heaven and earth.
   </h4>
   <div class="image-wrapper">
     <img src="assets/owners/yinranch_owners-1.jpg" alt="hero_pic" />
@@ -64,26 +70,25 @@
     <p>
       With the help of our friends and a network of incredible farmers, we grow sage for soap and tomatoes for candles.
       We harvest salt from the cliffs of Big Sur and press olive oil from very old trees and keep bees for honey.
-      In all of it, we're invested in pleasure — for ourselves and our clients and friends — because we think it’s a path to radical change and cataclysmic beauty.
+      In all of it, we're invested in pleasure — for ourselves and our clients and friends — because we think it’s a
+      path to radical change and cataclysmic beauty.
     </p>
   </div>
 </div>
+
 <div class="image-scroll-container">
-  <div class="scrolling-wrapper">
-    <img src="assets/resort/yinranch_gallery-3.jpg" alt="Image 1" />
-    <img src="assets/resort/yinranch_gallery-6.jpg" alt="Image 2" />
-    <img src="assets/resort/yinranch_gallery-1.jpg" alt="Image 3" />
-    <img src="assets/resort/yinranch_gallery-3.jpg" alt="Image 4" />
-    <img src="assets/resort/image67.jpg" alt="Image 5" />
+  <button class="scroll-btn prev" (click)="scrollPrev()"><i class="bi bi-chevron-left"></i></button>
+  <div #scrollContainer class="scrolling-wrapper" (mouseenter)="pauseAutoScroll()" (mouseleave)="resumeAutoScroll()">
 
-    <!-- Duplicate for seamless scroll -->
-    <img src="assets/resort/yinranch_gallery-9.jpg" alt="Image 1 Duplicate" />
-    <img src="assets/resort/image71.jpg" alt="Image 2 Duplicate" />
+    <div class="scroll-track d-flex">
+      <div *ngFor="let img of bottomImages" class="image-card mx-2 text-center">
+        <img [src]="img" class="img-fluid rounded" alt="Gallery Image" />
+      </div>
+      <div *ngFor="let img of bottomImages" class="image-card mx-2 text-center">
+        <img [src]="img" class="img-fluid rounded" alt="Gallery Image" />
+      </div>
+    </div>
   </div>
+
+  <button class="scroll-btn next" (click)="scrollNext()"><i class="bi bi-chevron-right"></i></button>
 </div>
-
-
-
-
-
-

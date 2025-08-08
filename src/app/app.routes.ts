@@ -6,17 +6,21 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LodgingComponent } from './pages/lodging/lodging/lodging.component';
 import { LodgingDetailsComponent } from './pages/lodging/lodging-details/lodging-details.component';
+import { VenuesComponent } from './pages/venues/venues/venues.component';
+import { VenueDetailComponent } from './pages/venues/venue-detail/venue-detail.component';
 
 export const routes: Routes = [{
     path: '',
     component: WrapperComponent,
     children: [
-        // { path: '', component: HomeComponent },
-        { path: '', component: YinRanchHomeComponent },
+         { path: '', pathMatch: 'full', redirectTo: 'home' },
+        { path: 'home', component: YinRanchHomeComponent },
         { path: 'about-us', component: AboutUsComponent },
         { path: 'contact-us', component: ContactComponent },
         { path: 'lodging', component: LodgingComponent },
-        { path: 'lodging-detail', component: LodgingDetailsComponent }
+        { path: 'lodging-detail', component: LodgingDetailsComponent },
+        { path: 'venues', component: VenuesComponent },
+        { path: 'venue-detail', component: VenueDetailComponent },
 
         // { path: 'media', component: MediaComponent },
         // { path: 'weddings', component: WeddingsComponent },

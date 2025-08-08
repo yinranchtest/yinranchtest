@@ -33,13 +33,14 @@ export class ContactComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
       lastName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
-      phoneNumber: ['', [Validators.required]],
-      termsAndCondition: ['', [Validators.required]],
-      venueName: [''],
+      phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
+      isOverNightLodging: [''],
+      estimatedGuest:[''],
       eventName: [''],
       venuePackageType: [''],
       venueSearchingProcess: [''],
-      message: ['']
+      message: [''],
+      eventDay:['']
     })
   }
 
@@ -48,9 +49,7 @@ export class ContactComponent implements OnInit {
   }
 
   onClickToChangeStep(step: number) {
-    const { termsAndCondition } = this.contactForm.value
-    console.log(termsAndCondition)
-    if (this.contactForm.valid && termsAndCondition) {
+    if (this.contactForm.valid) {
       this.currentStep = step;
     } else {
       this.submitted = true
@@ -73,7 +72,6 @@ export class ContactComponent implements OnInit {
     let payload = {
       ...this.contactForm.value
     }
-    delete payload.termsAndCondition
     this._contact.addContact(payload).subscribe(
       (response: any) => {
         this._alertService.showAlert(response.message, 'success');

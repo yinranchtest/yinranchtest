@@ -5,11 +5,13 @@
     </div>
 
     <div class="stepper d-flex justify-content-center mb-2">
-        <div class="step" [ngClass]="{ 'active': currentStep == 1, 'completed': currentStep > 1}" (click)="onClickToChangeStep(1)">
+        <div class="step" [ngClass]="{ 'active': currentStep == 1, 'completed': currentStep > 1}"
+            (click)="onClickToChangeStep(1)">
             <div class="circle">1</div>
             <div class="line"></div>
         </div>
-        <div class="step" [ngClass]="{ 'active': currentStep == 2, 'completed': currentStep > 2 }" (click)="onClickToChangeStep(2)">
+        <div class="step" [ngClass]="{ 'active': currentStep == 2, 'completed': currentStep > 2 }"
+            (click)="onClickToChangeStep(2)">
             <div class="circle">2</div>
             <div class="line"></div>
         </div>
@@ -62,12 +64,16 @@
                     <label class="form-label">PHONE NUMBER<span class="text-danger">*</span></label>
                     <input type="tel" class="form-control" placeholder="Phone number" formControlName="phoneNumber">
                     <small
-                        *ngIf="contactForm.get('phoneNumber')?.invalid && (contactForm.get('phoneNumber')?.dirty || contactForm.get('phoneNumber')?.touched||submitted)">
+                        *ngIf="contactForm.get('phoneNumber')?.errors?.['required'] && (contactForm.get('phoneNumber')?.touched || submitted)">
                         Phone Number is required
+                    </small>
+                    <small
+                        *ngIf="contactForm.get('phoneNumber')?.errors?.['pattern'] && (contactForm.get('phoneNumber')?.touched || submitted)">
+                        Phone Number should be valid
                     </small>
                 </div>
 
-                <div class="form-check mb-4">
+                <!-- <div class="form-check mb-4">
                     <input class="form-check-input" type="checkbox" id="consent" formControlName="termsAndCondition">
                     <label class="form-check-label small" for="consent">
                         By checking this box, I consent to receive information via text message from Wedgewood
@@ -82,7 +88,7 @@
                         I also confirm that you have the authority to send text messages on the number I provided.
                         Text HELP for assistance and STOP to unsubscribe.
                     </label>
-                </div>
+                </div> -->
 
                 <div class="text-end">
                     <button type="button" class="btn custom-button-form px-4 mb-4" (click)="next()">NEXT</button>
@@ -91,17 +97,11 @@
             <div *ngIf="currentStep == 2">
                 <h6 class="mb-4">Step 2: Find your venue</h6>
                 <div class="mb-3">
-                    <label class="form-label">WHICH SPECIFIC VENUE DO YOU LIKE?</label>
-                    <select id="venueType" class="form-control" name="venueType" formControlName="venueName">
+                    <label class="form-label">ARE YOU LOOKING FOR OVERNIGHT LODGING?</label>
+                    <select id="venueType" class="form-control" name="venueType" formControlName="isOverNightLodging">
                         <option value="" disabled selected>Please select</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="California - Northern">California - Northern</option>
-                        <option value="California - Sourthern">California - Sourthern</option>
-                        <option value="Colorodo">Colorodo</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New England">New England</option>
-                        <option value="Texas">Texas</option>
-                        <option value="North Carolina">North Carolina</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -112,6 +112,11 @@
                         <option value="Corporate">Corporate</option>
                         <option value="Other">Other</option>
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ESTIMATED GUEST COUNT?</label>
+                    <input type="number" placeholder="Estimated guest count" class="form-control"
+                        formControlName="estimatedGuest" />
                 </div>
                 <div class="text-end">
                     <button type="button" class="btn custom-button-form px-4 mb-4"
@@ -142,6 +147,11 @@
                         <option value="All inclusive: Let's make this easy and fun!">All inclusive: Let's make this easy
                             and fun!</option>
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">WHEN ARE YOU LOOKING TO HOST YOUR EVENT?</label>
+                    <input type="input" placeholder="When to host event" class="form-control"
+                        formControlName="eventDay" />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Is there anything else we should know?</label>

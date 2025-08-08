@@ -11,7 +11,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './yin-ranch-home.component.scss'
 })
 export class YinRanchHomeComponent {
-  @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('scrollWrapper', { static: false }) scrollWrapper!: ElementRef<HTMLDivElement>;
 
   images = [
     { url: 'assets/resort/yinranch_gallery-1.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
@@ -25,45 +26,99 @@ export class YinRanchHomeComponent {
     { url: 'assets/resort/yinranch_gallery-9.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
   ];
 
-  private scrollSpeed = 0.5;
-  private animationFrameId: number | null = null;
-  private isPaused = false;
-
   ngAfterViewInit(): void {
-    this.startScroll();
+    this.startAutoScroll();
   }
 
-  startScroll(): void {
-    const container = this.scrollContainer.nativeElement;
+  bottomImages = [
+    'assets/resort/yinranch_gallery-3.jpg',
+    'assets/resort/yinranch_gallery-6.jpg',
+    'assets/resort/yinranch_gallery-1.jpg',
+    'assets/resort/yinranch_gallery-3.jpg',
+    'assets/resort/image67.jpg',
+    'assets/resort/yinranch_gallery-3.jpg',
+    'assets/resort/yinranch_gallery-6.jpg',
+    'assets/resort/yinranch_gallery-1.jpg',
+    'assets/resort/yinranch_gallery-3.jpg',
+    'assets/resort/image67.jpg'
+  ];
 
-    const scroll = () => {
-      if (!this.isPaused) {
-        container.scrollLeft += this.scrollSpeed;
+  autoScrollIntervalId: any;
+  autoScrollStep = 2;
+  autoScrollDelay = 20;
 
-        // Reset scrollLeft when halfway through duplicated content
-        const maxScroll = container.scrollWidth / 2;
-        if (container.scrollLeft >= maxScroll) {
-          container.scrollLeft = 0;
-        }
+  userInteracting = false;
+  resumeTimeoutId: any;
+
+  startAutoScroll(): void {
+    this.clearAutoScroll();
+    this.autoScrollIntervalId = setInterval(() => {
+      if (!this.userInteracting) {
+        this.autoScrollStepForward();
       }
-
-      this.animationFrameId = requestAnimationFrame(scroll);
-    };
-
-    scroll();
+    }, this.autoScrollDelay);
   }
 
-  pauseScroll(): void {
-    this.isPaused = true;
+  clearAutoScroll(): void {
+    if (this.autoScrollIntervalId) clearInterval(this.autoScrollIntervalId);
   }
 
-  resumeScroll(): void {
-    this.isPaused = false;
+  autoScrollStepForward(): void {
+    const container = this.scrollWrapper.nativeElement;
+    container.scrollLeft += this.autoScrollStep;
+
+    const maxScrollLeft = container.scrollWidth / 2;
+    if (container.scrollLeft >= maxScrollLeft) {
+      container.scrollLeft = container.scrollLeft - maxScrollLeft;
+    }
+
+    const bottomcontainer = this.scrollContainer.nativeElement;
+    bottomcontainer.scrollLeft += this.autoScrollStep;
+
+    const maxBottomScrollLeft = bottomcontainer.scrollWidth / 2;
+    if (bottomcontainer.scrollLeft >= maxBottomScrollLeft) {
+      bottomcontainer.scrollLeft = bottomcontainer.scrollLeft - maxBottomScrollLeft;
+    }
+  }
+
+  scrollNext(): void {
+    this.userInteracting = true;
+    this.scrollByAmount(300);
+    this.setResumeAutoScrollTimer();
+  }
+
+  scrollPrev(): void {
+    this.userInteracting = true;
+    this.scrollByAmount(-300);
+    this.setResumeAutoScrollTimer();
+  }
+
+  scrollByAmount(amount: number): void {
+    this.scrollWrapper.nativeElement.scrollBy({ left: amount, behavior: 'smooth' });
+    this.scrollContainer.nativeElement.scrollBy({ left: amount, behavior: 'smooth' });
+  }
+
+  pauseAutoScroll(): void {
+    this.userInteracting = true;
+    this.clearAutoScroll();
+  }
+
+  resumeAutoScroll(): void {
+    this.userInteracting = false;
+    this.startAutoScroll();
+  }
+
+  setResumeAutoScrollTimer(): void {
+    clearTimeout(this.resumeTimeoutId);
+    this.resumeTimeoutId = setTimeout(() => {
+      this.userInteracting = false;
+    }, 3000);
   }
 
   ngOnDestroy(): void {
-    if (this.animationFrameId !== null) {
-      cancelAnimationFrame(this.animationFrameId);
-    }
+    this.clearAutoScroll();
+    clearTimeout(this.resumeTimeoutId);
   }
 }
+
+
