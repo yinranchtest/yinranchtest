@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { LodgingService } from '../../../services/lodging/lodging.service';
 
 @Component({
   selector: 'app-lodging',
@@ -13,25 +14,22 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './lodging.component.scss'
 })
 export class LodgingComponent implements OnInit {
-  venues = [
-    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
-    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
-  ];
-  constructor(private router: Router) { }
+  public venues:any[] = [];
+  constructor(private router: Router, private _lodgingService:LodgingService) { }
   ngOnInit(): void {
-
+    this.getLodging()
   }
-  clickToShowDetails() {
-    this.router.navigate(['/lodging-detail'])
+
+  getLodging(){
+    this._lodgingService.getLodgings().subscribe((data:any) => {
+      this.venues = data;
+      console.log(this.venues)
+    },
+    (error:any)=>{
+      console.log("errror", error)
+    });
+  }
+  clickToShowDetails(id:number) {
+    this.router.navigate(['/lodging-detail', id])
   }
 }

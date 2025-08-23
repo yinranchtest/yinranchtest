@@ -1,0 +1,526 @@
+[
+  {
+    "id": 1,
+    "name": "Creek Cottage",
+    "capacity": 8,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "3 Bedroom"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-vcard",
+        "name": "6 Twin Beds"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 Queen"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 8"
+      },
+      {
+        "icon": "bi bi-bounding-box",
+        "name": "1,000 sq ft"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-droplet",
+        "name": "Washer/Dryer"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/creekCottage/hp.jpg",
+    "images":[
+      "assets/lodging/creekCottage/img1.jpg",
+      "assets/lodging/creekCottage/img2.jpg",
+      "assets/lodging/creekCottage/img3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Creek House Lodging",
+    "capacity": 22,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "9 Bedrooms"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "7 Bath"
+      },
+      {
+        "icon": "bi bi-egg-fried",
+        "name": "2 Full Kitchen"
+      },
+      {
+        "icon": "bi bi-house-door",
+        "name": "Stand Alone villa"
+      },
+      {
+        "icon": "bi bi-bounding-box",
+        "name": "4,000 sq ft"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 22"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-droplet",
+        "name": "Washer/Dryer"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-tools",
+        "name": "Iron"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/creekHouse/hp.jpg",
+    "images":[
+      "assets/lodging/creekHouse/img1.jpg",
+      "assets/lodging/creekHouse/img2.jpg",
+      "assets/lodging/creekHouse/img3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Redwood Village Lodging #1",
+    "capacity": 4,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "2 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-vcard",
+        "name": "1 Full Bed"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 King Bed"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood1/hp.jpg",
+    "images":[
+      "assets/lodging/redWood1/img1.jpg",
+      "assets/lodging/redWood1/img2.jpg",
+      "assets/lodging/redWood1/img3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Redwood Village Lodging #2",
+    "capacity": 6,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "3 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 Queen Bed"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "2 King Beds"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 6"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood2/hp.jpg",
+    "images":[
+      "assets/lodging/redWood2/img1.jpg",
+      "assets/lodging/redWood2/img2.jpg",
+      "assets/lodging/redWood2/img3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Redwood Village Lodging #3",
+    "capacity": 13,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "4 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "2 King Beds"
+      },
+      {
+        "icon": "bi bi-moon-stars",
+        "name": "1 Day Bed"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 Queen Bed"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 13"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-droplet",
+        "name": "Washer/Dryer"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood3/hp.jpg",
+    "images":[
+      "assets/lodging/redWood3/img1.jpg",
+      "assets/lodging/redWood3/img2.jpg",
+      "assets/lodging/redWood3/img3.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Redwood Village Lodging #4",
+    "capacity": 4,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "2 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "1 Bath"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 King Bed"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 Queen Bed"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 4"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood4/hp.jpg",
+    "images":[
+      "assets/lodging/redWood4/img1.jpg",
+      "assets/lodging/redWood4/img2.jpg",
+      "assets/lodging/redWood4/img3.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Redwood Village Lodging #5",
+    "capacity": 12,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "4 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "3 Queen Beds"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 12"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-droplet",
+        "name": "Washer/Dryer"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood5/hp.jpg",
+    "images":[
+      "assets/lodging/redWood5/img1.jpg",
+      "assets/lodging/redWood5/img2.jpg",
+      "assets/lodging/redWood5/img3.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Redwood Village Lodging #6",
+    "capacity": 5,
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-door-closed",
+        "name": "4 Beds"
+      },
+      {
+        "icon": "bi bi-badge-wc",
+        "name": "2 Bath"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "2 King Beds"
+      },
+      {
+        "icon": "bi bi-person-hearts",
+        "name": "1 Queen Bed"
+      },
+      {
+        "icon": "bi bi-people",
+        "name": "Sleeps 5"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-wifi",
+        "name": "Internet"
+      },
+      {
+        "icon": "bi bi-tv",
+        "name": "Tv"
+      },
+      {
+        "icon": "bi bi-tree",
+        "name": "Patio"
+      },
+      {
+        "icon": "bi bi-thermometer-half",
+        "name": "AC/Heater"
+      },
+      {
+        "icon": "bi bi-cup-hot",
+        "name": "Coffee maker"
+      },
+      {
+        "icon": "bi bi-scissors",
+        "name": "Hair dryer"
+      },
+      {
+        "icon": "bi bi-car-front",
+        "name": "Parking"
+      }
+    ],
+    "homePage":"assets/lodging/redWood6/hp.jpg",
+    "images":[
+      "assets/lodging/redWood6/img1.jpg",
+      "assets/lodging/redWood6/img2.jpg",
+      "assets/lodging/redWood6/img3.jpg"
+    ]
+  }
+]

@@ -18,7 +18,7 @@ export const routes: Routes = [{
         { path: 'about-us', component: AboutUsComponent },
         { path: 'contact-us', component: ContactComponent },
         { path: 'lodging', component: LodgingComponent },
-        { path: 'lodging-detail', component: LodgingDetailsComponent },
+        { path: 'lodging-detail/:id', component: LodgingDetailsComponent },
         { path: 'venues', component: VenuesComponent },
         { path: 'venue-detail', component: VenueDetailComponent },
 
