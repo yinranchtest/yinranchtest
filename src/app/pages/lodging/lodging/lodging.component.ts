@@ -30,6 +30,6 @@ export class LodgingComponent implements OnInit {
     });
   }
   clickToShowDetails(id:number) {
-    this.router.navigate(['/lodging-detail', id])
+    this.router.navigate(['/lodging', id])
   }
 }

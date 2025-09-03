@@ -32,7 +32,7 @@ export class VenuesComponent {
 
   }
   clickToShowDetails() {
-    this.router.navigate(['/venue-detail'])
+    this.router.navigate(['/venues/detail'])
   }
 
 }

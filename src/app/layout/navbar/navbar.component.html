@@ -3,8 +3,12 @@
         <div class="logo" [routerLink]="['/']">YIN RANCH</div>
         <ul class="nav-links">
             <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['/venues']">Venues</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['/lodging']">Lodging</a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
+                <a [routerLink]="['/venues']">Venues</a>
+            </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
+                <a [routerLink]="['/lodging']">Lodging</a>
+            </li>
             <li routerLinkActive="active"><a [routerLink]="['/about-us']">Our Story</a></li>
             <li routerLinkActive="active"><a [routerLink]="['/contact-us']">Contact Us</a></li>
         </ul>
