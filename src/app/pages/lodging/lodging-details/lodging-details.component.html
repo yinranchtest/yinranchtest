@@ -7,7 +7,7 @@
 
     <div class="carousel-container">
         <div class="carousel-track" [class.no-transition]="!transitionEnabled"
-            [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 20px) + 10%))'">
+            [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 25px) + 10%))'">
             <div class="carousel-item" *ngFor="let img of loopedImages">
                 <img [src]="img" alt="carousel image" />
             </div>
@@ -22,8 +22,8 @@
         </div>
     </div>
 
+    <div class="lodging-extra-info container">
 
-    <div class="lodging-header">
         <h2 class="lodging-title">Poppy, bright and cheerful space</h2>
         <p class="lodging-location text-muted mb-4">Toronto - Canada</p>
 
@@ -32,11 +32,8 @@
                 <i class={{details?.icon}}></i>{{details?.name}}
             </div>
         </div>
-    </div>
 
-    <div class="lodging-extra-info container">
-
-        <div class="amenities-section mb-5">
+        <div class="amenities-section mb-5 mt-5">
             <h4 class="section-title mb-3"><b>Amenities</b></h4>
             <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
                 <div class="col" *ngFor="let details of lodgingDetails?.amenities">
