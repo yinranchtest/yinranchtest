@@ -22,13 +22,6 @@ export class LodgingDetailsComponent implements OnInit {
   lodgingId: any
   lodgingDetails: any
 
-
-  images = [
-    'assets/resort/lodging.jpg',
-    'assets/resort/lodging.jpg',
-    'assets/resort/lodging.jpg'
-  ];
-
   currentIndex = 1;
   transitionEnabled = true;
 
@@ -53,17 +46,20 @@ export class LodgingDetailsComponent implements OnInit {
   }
 
   get loopedImages() {
-    return [this.lodgingDetails?.images[this.lodgingDetails?.images.length - 1], ...this.lodgingDetails?.images, this.lodgingDetails?.images[0]];
+    const images = this.lodgingDetails?.images ?? [];
+    if (images.length === 0) return [];
+
+    return [images[images.length - 1], ...images, images[0]];
   }
 
   next() {
     this.currentIndex++;
     if (this.currentIndex === this.loopedImages.length - 1) {
       setTimeout(() => {
-        this.transitionEnabled = false; 
-        this.currentIndex = 1; 
-        setTimeout(() => this.transitionEnabled = true, 50); 
-      }, 600); 
+        this.transitionEnabled = false;
+        this.currentIndex = 1;
+        setTimeout(() => this.transitionEnabled = true, 50);
+      }, 600);
     }
   }
 
@@ -79,6 +75,12 @@ export class LodgingDetailsComponent implements OnInit {
   }
 
   goToSlide(index: number) {
+    console.log(index)
     this.currentIndex = index + 1;
+  }
+
+  get actualImages() {
+    // Return only real images (exclude prepended/appended)
+    return this.lodgingDetails?.images ?? [];
   }
 }
