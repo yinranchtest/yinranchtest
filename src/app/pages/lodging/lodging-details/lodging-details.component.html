@@ -17,8 +17,9 @@
         <button class="nav next" (click)="next()">&#10095;</button>
 
         <div class="dots">
-            <span *ngFor="let img of actualImages; let i = index" (click)="goToSlide(i)"
-                [class.active]="currentIndex === i + 1"></span>
+            <p>{{currentIndex}}/{{actualImages?.length}}</p>
+            <!-- <span *ngFor="let img of actualImages; let i = index" (click)="goToSlide(i)"
+                [class.active]="currentIndex === i + 1"></span> -->
         </div>
     </div>
 

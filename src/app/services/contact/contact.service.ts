@@ -12,5 +12,9 @@ export class ContactService {
     let url = `${environment.host}/api/addContact`
     return this._http.post(url, payload)
   }
+  sendMail(payload:any) {
+    let url = `${environment.host}/api/sendMail`
+    return this._http.post(url, payload)
+  }
 
 }

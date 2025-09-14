@@ -39,7 +39,7 @@
         color: #5a4d43;
         z-index: 9999;
     }
-    
+
     .amenities-list {
         font-size: 18px;
         color: #444;
@@ -170,19 +170,25 @@
     left: 20px;
     display: flex;
     gap: 6px;
+
+    p {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
 }
 
-.dots span {
-    width: 8px;
-    height: 8px;
-    background: gray;
-    border-radius: 100%;
-    cursor: pointer;
-}
+// .dots span {
+//     width: 8px;
+//     height: 8px;
+//     background: gray;
+//     border-radius: 100%;
+//     cursor: pointer;
+// }
 
-.dots span.active {
-    background: white;
-}
+// .dots span.active {
+//     background: white;
+// }
 
 .carousel-track.no-transition {
     transition: none !important;

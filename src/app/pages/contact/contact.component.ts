@@ -35,12 +35,12 @@ export class ContactComponent implements OnInit {
       lastName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
       isOverNightLodging: [''],
-      estimatedGuest:[''],
+      estimatedGuest: [''],
       eventName: [''],
       venuePackageType: [''],
       venueSearchingProcess: [''],
       message: [''],
-      eventDay:['']
+      eventDay: ['']
     })
   }
 
@@ -74,10 +74,19 @@ export class ContactComponent implements OnInit {
     }
     this._contact.addContact(payload).subscribe(
       (response: any) => {
-        this._alertService.showAlert(response.message, 'success');
-        this.contactForm.reset()
-        this.currentStep = 1
-        this.submitted = false
+        this._contact.sendMail(payload).subscribe(
+          (response: any) => {
+            this._alertService.showAlert(response.message, 'success');
+            this.contactForm.reset()
+            this.currentStep = 1
+            this.submitted = false
+          },
+          ({ error }: any) => {
+            console.log(error)
+            this._alertService.showAlert(error.message, 'danger');
+            this.submitted = false
+          }
+        )
       },
       ({ error }: any) => {
         console.log(error)
