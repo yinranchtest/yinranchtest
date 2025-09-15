@@ -59,11 +59,21 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/creekCottage/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/creekCottage/hp.jpg",
+    "images": [
       "assets/lodging/creekCottage/img1.jpg",
       "assets/lodging/creekCottage/img2.jpg",
-      "assets/lodging/creekCottage/img3.jpg"
+      "assets/lodging/creekCottage/img3.jpg",
+      "assets/lodging/creekCottage/img4.jpg",
+      "assets/lodging/creekCottage/img5.jpg",
+      "assets/lodging/creekCottage/img6.jpg",
+      "assets/lodging/creekCottage/img7.jpg",
+      "assets/lodging/creekCottage/img8.jpg",
+      "assets/lodging/creekCottage/img9.jpg",
+      "assets/lodging/creekCottage/img10.jpg",
+      "assets/lodging/creekCottage/img11.jpg",
+      "assets/lodging/creekCottage/img12.jpg",
+      "assets/lodging/creekCottage/img13.jpg"
     ]
   },
   {
@@ -134,11 +144,46 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/creekHouse/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/creekHouse/hp.jpg",
+    "images": [
       "assets/lodging/creekHouse/img1.jpg",
       "assets/lodging/creekHouse/img2.jpg",
-      "assets/lodging/creekHouse/img3.jpg"
+      "assets/lodging/creekHouse/img3.jpg",
+      "assets/lodging/creekHouse/img4.jpg",
+      "assets/lodging/creekHouse/img5.jpg",
+      "assets/lodging/creekHouse/img6.jpg",
+      "assets/lodging/creekHouse/img7.jpg",
+      "assets/lodging/creekHouse/img8.jpg",
+      "assets/lodging/creekHouse/img9.jpg",
+      "assets/lodging/creekHouse/img10.jpg",
+      "assets/lodging/creekHouse/img11.jpg",
+      "assets/lodging/creekHouse/img12.jpg",
+      "assets/lodging/creekHouse/img13.jpg",
+      "assets/lodging/creekHouse/img14.jpg",
+      "assets/lodging/creekHouse/img15.jpg",
+      "assets/lodging/creekHouse/img16.jpg",
+      "assets/lodging/creekHouse/img17.jpg",
+      "assets/lodging/creekHouse/img18.jpg",
+      "assets/lodging/creekHouse/img19.jpg",
+      "assets/lodging/creekHouse/img20.jpg",
+      "assets/lodging/creekHouse/img21.jpg",
+      "assets/lodging/creekHouse/img22.jpg",
+      "assets/lodging/creekHouse/img23.jpg",
+      "assets/lodging/creekHouse/img24.jpg",
+      "assets/lodging/creekHouse/img25.jpg",
+      "assets/lodging/creekHouse/img26.jpg",
+      "assets/lodging/creekHouse/img27.jpg",
+      "assets/lodging/creekHouse/img28.jpg",
+      "assets/lodging/creekHouse/img29.jpg",
+      "assets/lodging/creekHouse/img30.jpg",
+      "assets/lodging/creekHouse/img31.jpg",
+      "assets/lodging/creekHouse/img32.jpg",
+      "assets/lodging/creekHouse/img33.jpg",
+      "assets/lodging/creekHouse/img34.jpg",
+      "assets/lodging/creekHouse/img35.jpg",
+      "assets/lodging/creekHouse/img36.jpg",
+      "assets/lodging/creekHouse/img37.jpg",
+      "assets/lodging/creekHouse/img38.jpg"
     ]
   },
   {
@@ -193,11 +238,22 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood1/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood1/hp.jpg",
+    "images": [
       "assets/lodging/redWood1/img1.jpg",
       "assets/lodging/redWood1/img2.jpg",
-      "assets/lodging/redWood1/img3.jpg"
+      "assets/lodging/redWood1/img3.jpg",
+      "assets/lodging/redWood1/img4.jpg",
+      "assets/lodging/redWood1/img5.jpg",
+      "assets/lodging/redWood1/img6.jpg",
+      "assets/lodging/redWood1/img7.jpg",
+      "assets/lodging/redWood1/img8.jpg",
+      "assets/lodging/redWood1/img9.jpg",
+      "assets/lodging/redWood1/img10.jpg",
+      "assets/lodging/redWood1/img11.jpg",
+      "assets/lodging/redWood1/img12.jpg",
+      "assets/lodging/redWood1/img13.jpg",
+      "assets/lodging/redWood1/img14.jpg"
     ]
   },
   {
@@ -256,11 +312,24 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood2/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood2/hp.jpg",
+    "images": [
       "assets/lodging/redWood2/img1.jpg",
       "assets/lodging/redWood2/img2.jpg",
-      "assets/lodging/redWood2/img3.jpg"
+      "assets/lodging/redWood2/img3.jpg",
+      "assets/lodging/redWood2/img4.jpg",
+      "assets/lodging/redWood2/img5.jpg",
+      "assets/lodging/redWood2/img6.jpg",
+      "assets/lodging/redWood2/img7.jpg",
+      "assets/lodging/redWood2/img8.jpg",
+      "assets/lodging/redWood2/img9.jpg",
+      "assets/lodging/redWood2/img10.jpg",
+      "assets/lodging/redWood2/img11.jpg",
+      "assets/lodging/redWood2/img12.jpg",
+      "assets/lodging/redWood2/img13.jpg",
+      "assets/lodging/redWood2/img14.jpg",
+      "assets/lodging/redWood2/img15.jpg",
+      "assets/lodging/redWood2/img16.jpg"
     ]
   },
   {
@@ -327,11 +396,27 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood3/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood3/hp.jpg",
+    "images": [
       "assets/lodging/redWood3/img1.jpg",
       "assets/lodging/redWood3/img2.jpg",
-      "assets/lodging/redWood3/img3.jpg"
+      "assets/lodging/redWood3/img3.jpg",
+      "assets/lodging/redWood3/img4.jpg",
+      "assets/lodging/redWood3/img5.jpg",
+      "assets/lodging/redWood3/img6.jpg",
+      "assets/lodging/redWood3/img7.jpg",
+      "assets/lodging/redWood3/img8.jpg",
+      "assets/lodging/redWood3/img9.jpg",
+      "assets/lodging/redWood3/img10.jpg",
+      "assets/lodging/redWood3/img11.jpg",
+      "assets/lodging/redWood3/img12.jpg",
+      "assets/lodging/redWood3/img13.jpg",
+      "assets/lodging/redWood3/img14.jpg",
+      "assets/lodging/redWood3/img15.jpg",
+      "assets/lodging/redWood3/img16.jpg",
+      "assets/lodging/redWood3/img17.jpg",
+      "assets/lodging/redWood3/img18.jpg",
+      "assets/lodging/redWood3/img19.jpg"
     ]
   },
   {
@@ -390,11 +475,21 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood4/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood4/hp.jpg",
+    "images": [
       "assets/lodging/redWood4/img1.jpg",
       "assets/lodging/redWood4/img2.jpg",
-      "assets/lodging/redWood4/img3.jpg"
+      "assets/lodging/redWood4/img3.jpg",
+      "assets/lodging/redWood4/img4.jpg",
+      "assets/lodging/redWood4/img5.jpg",
+      "assets/lodging/redWood4/img6.jpg",
+      "assets/lodging/redWood4/img7.jpg",
+      "assets/lodging/redWood4/img8.jpg",
+      "assets/lodging/redWood4/img9.jpg",
+      "assets/lodging/redWood4/img10.jpg",
+      "assets/lodging/redWood4/img11.jpg",
+      "assets/lodging/redWood4/img12.jpg",
+      "assets/lodging/redWood4/img13.jpg"
     ]
   },
   {
@@ -453,11 +548,20 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood5/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood5/hp.jpg",
+    "images": [
       "assets/lodging/redWood5/img1.jpg",
       "assets/lodging/redWood5/img2.jpg",
-      "assets/lodging/redWood5/img3.jpg"
+      "assets/lodging/redWood5/img3.jpg",
+      "assets/lodging/redWood5/img4.jpg",
+      "assets/lodging/redWood5/img5.jpg",
+      "assets/lodging/redWood5/img6.jpg",
+      "assets/lodging/redWood5/img7.jpg",
+      "assets/lodging/redWood5/img8.jpg",
+      "assets/lodging/redWood5/img9.jpg",
+      "assets/lodging/redWood5/img10.jpg",
+      "assets/lodging/redWood5/img11.jpg",
+      "assets/lodging/redWood5/img12.jpg"
     ]
   },
   {
@@ -516,11 +620,19 @@
         "name": "Parking"
       }
     ],
-    "homePage":"assets/lodging/redWood6/hp.jpg",
-    "images":[
+    "homePage": "assets/lodging/redWood6/hp.jpg",
+    "images": [
       "assets/lodging/redWood6/img1.jpg",
       "assets/lodging/redWood6/img2.jpg",
-      "assets/lodging/redWood6/img3.jpg"
+      "assets/lodging/redWood6/img3.jpg",
+      "assets/lodging/redWood6/img4.jpg",
+      "assets/lodging/redWood6/img5.jpg",
+      "assets/lodging/redWood6/img6.jpg",
+      "assets/lodging/redWood6/img7.jpg",
+      "assets/lodging/redWood6/img8.jpg",
+      "assets/lodging/redWood6/img9.jpg",
+      "assets/lodging/redWood6/img10.jpg",
+      "assets/lodging/redWood6/img11.jpg"
     ]
   }
 ]
