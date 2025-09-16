@@ -1,0 +1,57 @@
+<div class="enquiries-container">
+  <div class="enquiries-header">
+    <h3>Enquiries</h3>
+  </div>
+
+  <div class="table-container">
+    <table class="enquiries-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Event Type</th>
+          <th>Event Date</th>
+          <th>Guest Count</th>
+          <th>Venue Package</th>
+          <th>Overnight Lodging</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enquiry of enquiries?.data; let i = index">
+          <td>{{ (currentPage - 1) * size + i + 1 }}</td>
+          <td>{{ enquiry.firstName }} {{ enquiry.lastName }}</td>
+          <td>{{ enquiry.email }}</td>
+          <td>{{ enquiry.phoneNumber }}</td>
+          <td>{{ enquiry.eventName || 'N/A' }}</td>
+          <td>{{ enquiry.eventDay || 'N/A' }}</td>
+          <td>{{ enquiry.estimatedGuest || 'N/A' }}</td>
+          <td>{{ enquiry.venuePackageType || 'N/A' }}</td>
+          <td>{{ enquiry.isOverNightLodging ? 'Yes' : 'No' }}</td>
+        </tr>
+        <tr *ngIf="enquiries?.length === 0 || enquiries?.data?.length == 0">
+          <td colspan="9" class="no-data">No enquiries found</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination-container">
+      <div class="pagination-info">
+        <span class="page-info">Page {{ currentPage }} of {{ totalPages }}</span>
+      </div>
+      <div class="pagination-buttons">
+        <button class="pagination-btn prev-btn" [disabled]="isFirstPage" (click)="previousPage()"
+          [class.disabled]="isFirstPage">
+          <i class="arrow-left"><i class="bi bi-arrow-left-circle"></i></i>
+          Previous
+        </button>
+        <button class="pagination-btn next-btn" [disabled]="isLastPage" (click)="nextPage()"
+          [class.disabled]="isLastPage">
+          Next
+          <i class="arrow-right"><i class="bi bi-arrow-right-circle"></i></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

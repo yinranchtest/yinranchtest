@@ -48,8 +48,6 @@ export class YinRanchHomeComponent {
 
   userInteracting = false;
   resumeTimeoutId: any;
-  
-  // Track which containers are being interacted with
   topContainerInteracting = false;
   bottomContainerInteracting = false;
   topContainerResumeTimeoutId: any;
@@ -67,12 +65,10 @@ export class YinRanchHomeComponent {
   }
 
   autoScrollStepForward(): void {
-    // Handle first scroll container (top images) - only if not being interacted with
     if (!this.topContainerInteracting) {
       this.handleInfiniteScroll(this.scrollWrapper.nativeElement);
     }
     
-    // Handle second scroll container (bottom images) - only if not being interacted with
     if (!this.bottomContainerInteracting) {
       this.handleInfiniteScroll(this.scrollContainer.nativeElement);
     }
@@ -82,8 +78,6 @@ export class YinRanchHomeComponent {
     if (!container) return;
     
     container.scrollLeft += this.autoScrollStep;
-    
-    // Handle infinite scroll reset directly here for auto-scroll
     const scrollTrack = container.querySelector('.scroll-track') as HTMLElement;
     if (scrollTrack) {
       const singleSetWidth = scrollTrack.scrollWidth / 2;
@@ -110,10 +104,7 @@ export class YinRanchHomeComponent {
   }
 
   scrollByAmount(amount: number): void {
-    // Handle first scroll container (top images)
     this.scrollContainerByAmount(this.scrollWrapper.nativeElement, amount);
-    
-    // Handle second scroll container (bottom images)
     this.scrollContainerByAmount(this.scrollContainer.nativeElement, amount);
   }
 
@@ -121,8 +112,6 @@ export class YinRanchHomeComponent {
     if (!container) return;
     
     container.scrollBy({ left: amount, behavior: 'smooth' });
-    
-    // Handle infinite scroll reset for manual scrolling
     setTimeout(() => {
       const scrollTrack = container.querySelector('.scroll-track') as HTMLElement;
       if (scrollTrack) {
@@ -131,7 +120,7 @@ export class YinRanchHomeComponent {
           container.scrollLeft = container.scrollLeft - singleSetWidth;
         }
       }
-    }, 300); // Wait for smooth scroll to complete
+    }, 300); 
   }
 
   pauseAutoScroll(): void {
