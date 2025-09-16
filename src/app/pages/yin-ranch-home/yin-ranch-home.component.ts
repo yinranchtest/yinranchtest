@@ -15,15 +15,16 @@ export class YinRanchHomeComponent {
   @ViewChild('scrollWrapper', { static: false }) scrollWrapper!: ElementRef<HTMLDivElement>;
 
   images = [
-    { url: 'assets/resort/yinranch_gallery-1.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/resort/yinranch_gallery-2.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/resort/yinranch_gallery-3.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/resort/yinranch_gallery-4.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/resort/yinranch_gallery-5.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/resort/yinranch_gallery-6.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/resort/yinranch_gallery-7.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/resort/yinranch_gallery-8.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/resort/yinranch_gallery-9.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img1.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
+    { url: 'assets/home/rotatingImage1/img2.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
+    { url: 'assets/home/rotatingImage1/img3.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
+    { url: 'assets/home/rotatingImage1/img4.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img5.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img6.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img7.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img8.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img9.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
+    { url: 'assets/home/rotatingImage1/img10.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' }
   ];
 
   ngAfterViewInit(): void {
@@ -31,16 +32,14 @@ export class YinRanchHomeComponent {
   }
 
   bottomImages = [
-    'assets/resort/yinranch_gallery-3.jpg',
-    'assets/resort/yinranch_gallery-6.jpg',
-    'assets/resort/yinranch_gallery-1.jpg',
-    'assets/resort/yinranch_gallery-3.jpg',
-    'assets/resort/image67.jpg',
-    'assets/resort/yinranch_gallery-3.jpg',
-    'assets/resort/yinranch_gallery-6.jpg',
-    'assets/resort/yinranch_gallery-1.jpg',
-    'assets/resort/yinranch_gallery-3.jpg',
-    'assets/resort/image67.jpg'
+    'assets/home/rotatingImage2/img1.jpg',
+    'assets/home/rotatingImage2/img2.jpg',
+    'assets/home/rotatingImage2/img3.jpg',
+    'assets/home/rotatingImage2/img4.jpg',
+    'assets/home/rotatingImage2/img5.jpg',
+    'assets/home/rotatingImage2/img6.jpg',
+    'assets/home/rotatingImage2/img7.jpg',
+    'assets/home/rotatingImage2/img8.jpg',
   ];
 
   autoScrollIntervalId: any;
@@ -49,13 +48,17 @@ export class YinRanchHomeComponent {
 
   userInteracting = false;
   resumeTimeoutId: any;
+  
+  // Track which containers are being interacted with
+  topContainerInteracting = false;
+  bottomContainerInteracting = false;
+  topContainerResumeTimeoutId: any;
+  bottomContainerResumeTimeoutId: any;
 
   startAutoScroll(): void {
     this.clearAutoScroll();
     this.autoScrollIntervalId = setInterval(() => {
-      if (!this.userInteracting) {
-        this.autoScrollStepForward();
-      }
+      this.autoScrollStepForward();
     }, this.autoScrollDelay);
   }
 
@@ -64,60 +67,126 @@ export class YinRanchHomeComponent {
   }
 
   autoScrollStepForward(): void {
-    const container = this.scrollWrapper.nativeElement;
-    container.scrollLeft += this.autoScrollStep;
-
-    const maxScrollLeft = container.scrollWidth / 2;
-    if (container.scrollLeft >= maxScrollLeft) {
-      container.scrollLeft = container.scrollLeft - maxScrollLeft;
+    // Handle first scroll container (top images) - only if not being interacted with
+    if (!this.topContainerInteracting) {
+      this.handleInfiniteScroll(this.scrollWrapper.nativeElement);
     }
+    
+    // Handle second scroll container (bottom images) - only if not being interacted with
+    if (!this.bottomContainerInteracting) {
+      this.handleInfiniteScroll(this.scrollContainer.nativeElement);
+    }
+  }
 
-    const bottomcontainer = this.scrollContainer.nativeElement;
-    bottomcontainer.scrollLeft += this.autoScrollStep;
-
-    const maxBottomScrollLeft = bottomcontainer.scrollWidth / 2;
-    if (bottomcontainer.scrollLeft >= maxBottomScrollLeft) {
-      bottomcontainer.scrollLeft = bottomcontainer.scrollLeft - maxBottomScrollLeft;
+  private handleInfiniteScroll(container: HTMLElement): void {
+    if (!container) return;
+    
+    container.scrollLeft += this.autoScrollStep;
+    
+    // Handle infinite scroll reset directly here for auto-scroll
+    const scrollTrack = container.querySelector('.scroll-track') as HTMLElement;
+    if (scrollTrack) {
+      const singleSetWidth = scrollTrack.scrollWidth / 2;
+      if (container.scrollLeft >= singleSetWidth) {
+        container.scrollLeft = container.scrollLeft - singleSetWidth;
+      }
     }
   }
 
   scrollNext(): void {
     this.userInteracting = true;
+    this.topContainerInteracting = true;
+    this.bottomContainerInteracting = true;
     this.scrollByAmount(300);
     this.setResumeAutoScrollTimer();
   }
 
   scrollPrev(): void {
     this.userInteracting = true;
+    this.topContainerInteracting = true;
+    this.bottomContainerInteracting = true;
     this.scrollByAmount(-300);
     this.setResumeAutoScrollTimer();
   }
 
   scrollByAmount(amount: number): void {
-    this.scrollWrapper.nativeElement.scrollBy({ left: amount, behavior: 'smooth' });
-    this.scrollContainer.nativeElement.scrollBy({ left: amount, behavior: 'smooth' });
+    // Handle first scroll container (top images)
+    this.scrollContainerByAmount(this.scrollWrapper.nativeElement, amount);
+    
+    // Handle second scroll container (bottom images)
+    this.scrollContainerByAmount(this.scrollContainer.nativeElement, amount);
+  }
+
+  private scrollContainerByAmount(container: HTMLElement, amount: number): void {
+    if (!container) return;
+    
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+    
+    // Handle infinite scroll reset for manual scrolling
+    setTimeout(() => {
+      const scrollTrack = container.querySelector('.scroll-track') as HTMLElement;
+      if (scrollTrack) {
+        const singleSetWidth = scrollTrack.scrollWidth / 2;
+        if (container.scrollLeft >= singleSetWidth) {
+          container.scrollLeft = container.scrollLeft - singleSetWidth;
+        }
+      }
+    }, 300); // Wait for smooth scroll to complete
   }
 
   pauseAutoScroll(): void {
     this.userInteracting = true;
+    this.topContainerInteracting = true;
+    this.bottomContainerInteracting = true;
     this.clearAutoScroll();
   }
 
   resumeAutoScroll(): void {
     this.userInteracting = false;
+    this.topContainerInteracting = false;
+    this.bottomContainerInteracting = false;
     this.startAutoScroll();
   }
 
   setResumeAutoScrollTimer(): void {
     clearTimeout(this.resumeTimeoutId);
+    clearTimeout(this.topContainerResumeTimeoutId);
+    clearTimeout(this.bottomContainerResumeTimeoutId);
+    
     this.resumeTimeoutId = setTimeout(() => {
       this.userInteracting = false;
     }, 3000);
+    
+    this.topContainerResumeTimeoutId = setTimeout(() => {
+      this.topContainerInteracting = false;
+    }, 3000);
+    
+    this.bottomContainerResumeTimeoutId = setTimeout(() => {
+      this.bottomContainerInteracting = false;
+    }, 3000);
+  }
+
+  pauseTopContainer(): void {
+    this.topContainerInteracting = true;
+  }
+
+  resumeTopContainer(): void {
+    this.topContainerInteracting = false;
+  }
+
+  pauseBottomContainer(): void {
+    this.bottomContainerInteracting = true;
+  }
+
+  resumeBottomContainer(): void {
+    this.bottomContainerInteracting = false;
   }
 
   ngOnDestroy(): void {
     this.clearAutoScroll();
     clearTimeout(this.resumeTimeoutId);
+    clearTimeout(this.topContainerResumeTimeoutId);
+    clearTimeout(this.bottomContainerResumeTimeoutId);
   }
 }
 

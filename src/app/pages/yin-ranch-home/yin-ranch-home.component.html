@@ -11,7 +11,7 @@
 <div class="image-scroll-container">
   <button class="scroll-btn prev" (click)="scrollPrev()"><i class="bi bi-chevron-left"></i></button>
 
-  <div #scrollWrapper class="scrolling-wrapper" (mouseenter)="pauseAutoScroll()" (mouseleave)="resumeAutoScroll()">
+  <div #scrollWrapper class="scrolling-wrapper" (mouseenter)="pauseTopContainer()" (mouseleave)="resumeTopContainer()">
     <div class="scroll-track d-flex">
       <div *ngFor="let item of images" class="image-card mx-2 text-center">
         <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
@@ -78,8 +78,7 @@
 
 <div class="image-scroll-container">
   <button class="scroll-btn prev" (click)="scrollPrev()"><i class="bi bi-chevron-left"></i></button>
-  <div #scrollContainer class="scrolling-wrapper" (mouseenter)="pauseAutoScroll()" (mouseleave)="resumeAutoScroll()">
-
+  <div #scrollContainer class="scrolling-wrapper" (mouseenter)="pauseBottomContainer()" (mouseleave)="resumeBottomContainer()">
     <div class="scroll-track d-flex">
       <div *ngFor="let img of bottomImages" class="image-card mx-2 text-center">
         <img [src]="img" class="img-fluid rounded" alt="Gallery Image" />
@@ -89,6 +88,5 @@
       </div>
     </div>
   </div>
-
   <button class="scroll-btn next" (click)="scrollNext()"><i class="bi bi-chevron-right"></i></button>
 </div>
