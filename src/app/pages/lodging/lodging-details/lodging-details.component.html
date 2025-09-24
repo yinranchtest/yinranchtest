@@ -1,10 +1,5 @@
 <div class="lodging-detail-page container mt-5">
 
-    <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
-        <b>Interested?</b> <b>Book a free tour now</b>
-        <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
-    </div>
-
     <div class="carousel-container">
         <div class="carousel-track" [class.no-transition]="!transitionEnabled"
             [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 20px) + 10%))'">
@@ -41,6 +36,11 @@
                     <i class={{details?.icon}}></i>{{details?.name}}
                 </div>
             </div>
+        </div>
+
+        <div class="floating-header alert alert-info text-center d-flex justify-content-between mb-5" role="alert">
+            <b>Interested?</b> <b>Book a free tour now</b>
+            <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
         </div>
 
         <div class="before-you-book-section">
