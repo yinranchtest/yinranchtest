@@ -1,30 +1,36 @@
 <div class="lodging-detail-page container mt-5">
 
-    <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
-        <b>Interested?</b> <b>Book a free tour now</b>
-        <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
-    </div>
-
-    <div class="lodging-header">
-        <h2 class="lodging-title">Poppy, bright and cheerful space</h2>
-        <p class="lodging-location text-muted mb-4">Toronto - Canada</p>
-
-        <div class="d-flex justify-content-evenly gap-5">
-            <div class="lodging-info d-flex flex-column flex-wrap justify-content-start gap-4">
-                <div><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>
-                <div><i class="bi bi-door-closed me-2"></i> 1.5 Bathrooms</div>
-                <div><i class="bi bi-laptop me-2"></i> 2 Workspaces</div>
-            </div>
-            <div class="lodging-info d-flex flex-column flex-wrap justify-content-start gap-4">
-                <div><i class="bi bi-moon me-2"></i> 1 Bed</div>
-                <div><i class="bi bi-people-fill me-2"></i> 2 Guest max</div>
-                <div><i class="bi bi-people-fill me-2"></i> Pets on request</div>
+    <div class="carousel-container">
+        <div class="carousel-track" [class.no-transition]="!transitionEnabled"
+            [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 20px) + 10%))'">
+            <div class="carousel-item" *ngFor="let img of loopedImages">
+                <img [src]="img" alt="carousel image" />
             </div>
         </div>
 
+        <button class="nav prev" (click)="prev()">&#10094;</button>
+        <button class="nav next" (click)="next()">&#10095;</button>
+
+        <div class="dots">
+            <p>{{currentIndex}}/{{actualImages?.length}}</p>
+        </div>
     </div>
 </div>
 <div class="lodging-extra-info container">
+
+    <div class="amenities-section mb-5">
+        <h2 class="lodging-title">Poppy, bright and cheerful space</h2>
+        <p class="lodging-location text-muted mb-4">Toronto - Canada</p>
+
+        <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
+            <div class="col"><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>
+            <div class="col"><i class="bi bi-door-closed me-2"></i> 1.5 Bathrooms</div>
+            <div class="col"><i class="bi bi-laptop me-2"></i> 2 Workspaces</div>
+            <div class="col"><i class="bi bi-moon me-2"></i> 1 Bed</div>
+            <div class="col"><i class="bi bi-people-fill me-2"></i> 2 Guest max</div>
+            <div class="col"><i class="bi bi-people-fill me-2"></i> Pets on request</div>
+        </div>
+    </div>
 
     <div class="amenities-section mb-5">
         <h4 class="section-title mb-3"><b>Amenities</b></h4>
@@ -43,6 +49,11 @@
             <div class="col"><i class="bi bi-scissors"></i> Hair dryer</div>
             <div class="col"><i class="bi bi-cup-hot"></i> Coffee or espresso maker</div>
         </div>
+    </div>
+
+    <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
+        <b>Interested?</b> <b>Book a free tour now</b>
+        <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
     </div>
 
     <div class="before-you-book-section">

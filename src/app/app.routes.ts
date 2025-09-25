@@ -23,7 +23,7 @@ export const routes: Routes = [
             { path: 'lodging', component: LodgingComponent },
             { path: 'lodging/:id', component: LodgingDetailsComponent },
             { path: 'venues', component: VenuesComponent },
-            { path: 'venues/detail', component: VenueDetailComponent }
+            { path: 'venues/:id', component: VenueDetailComponent }
 
             // { path: 'media', component: MediaComponent },
             // { path: 'weddings', component: WeddingsComponent },

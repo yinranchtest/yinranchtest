@@ -1,38 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { VenuesService } from '../../../services/venues/venues.service';
 
 @Component({
   selector: 'app-venues',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './venues.component.html',
   styleUrl: './venues.component.scss'
 })
 export class VenuesComponent {
 
-  venues = [
-    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
-    { name: 'CASA DEL RIO', image: 'assets/resort/lodging.jpg', capacity: 150 },
-    { name: 'THE HEADQUATERS', image: 'assets/resort/lodging.jpg', capacity: 300 },
-    { name: 'THE HARPER', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'DOVE CANYON', image: 'assets/resort/lodging.jpg', capacity: 170 },
-    { name: 'HIDDENBROOKE HILLS', image: 'assets/resort/lodging.jpg', capacity: 200 },
-    { name: 'THE SANCTUARY', image: 'assets/resort/lodging.jpg', capacity: 120 },
-  ];
-  constructor(private router: Router) { }
-  ngOnInit(): void {
 
+  public venues: any[] = [];
+  constructor(private router: Router, private _venueService: VenuesService) { }
+  ngOnInit(): void {
+    this.getLodging()
   }
-  clickToShowDetails() {
-    this.router.navigate(['/venues/detail'])
+
+  getLodging() {
+    this._venueService.getVenues().subscribe((data: any) => {
+      this.venues = data;
+      console.log(this.venues)
+    },
+      (error: any) => {
+        console.log("errror", error)
+      });
+  }
+  clickToShowDetails(id: number) {
+    this.router.navigate(['/venues', id])
   }
 
 }
