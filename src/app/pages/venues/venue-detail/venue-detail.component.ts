@@ -82,4 +82,23 @@ export class VenueDetailComponent implements OnInit {
     return this.venueDetails?.images ?? [];
   }
 
+  get displayIndex() {
+    const actualLength = this.actualImages.length;
+    if (actualLength === 0) return 1;
+    if (this.currentIndex < 0) {
+      return actualLength;
+    }
+    if (this.currentIndex === 0) {
+      return actualLength;
+    }
+    if (this.currentIndex >= 1 && this.currentIndex <= actualLength) {
+      return this.currentIndex;
+    }
+    if (this.currentIndex > actualLength) {
+      return 1;
+    }
+    
+    return 1; 
+  }
+
 }

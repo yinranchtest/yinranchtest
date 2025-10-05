@@ -3,19 +3,14 @@
 
     <div class="row g-4">
         <div class="col-md-3" *ngFor="let venue of venues">
-            <div class="venue-card position-relative rounded overflow-hidden shadow-sm"
-                (click)="clickToShowDetails(venue?.id)">
+            <div class="venue-card rounded overflow-hidden shadow-sm" (click)="clickToShowDetails(venue?.id)">
                 <div class="venue-image" [style.backgroundImage]="'url(' + venue.homePage + ')'">
-                    <div class="overlay"></div>
-                    <div class="venue-info text-white text-center">
-                        <h5 class="venue-title mb-1">{{ venue.name }}</h5>
-                        <p class="venue-capacity mb-0">Capacity: {{ venue.capacity }}</p>
-                    </div>
                 </div>
             </div>
+            <div class="venue-info text-start">
+                <h5 class="venue-title mb-1">{{ venue.name }}</h5>
+                <p class="venue-capacity mb-0">Capacity: {{ venue.capacity }}</p>
+            </div>
         </div>
-    </div>
-    <div class="map-section mt-4">
-        <img src="/assets/home/map.jpg" />
     </div>
 </div>

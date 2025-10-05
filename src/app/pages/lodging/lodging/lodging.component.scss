@@ -2,7 +2,7 @@
     margin-top: 90px;
 
     .venue-card {
-        height: 220px;
+        height: 400px;
         border-radius: 10px;
         cursor: pointer;
 
@@ -10,44 +10,28 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            position: relative;
             transition: transform 0.3s ease-in-out;
+            background-repeat: no-repeat;
 
             &:hover {
                 transform: scale(1.05);
             }
-
-            .overlay {
-                position: absolute;
-                inset: 0;
-                background-color: rgba(75, 75, 75, 0.2);
-                z-index: 1;
-            }
-
-            .venue-info {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;
-                font-weight: 500;
-                line-height: 1.3;
-
-                .venue-title {
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                }
-
-                .venue-capacity {
-                    font-size: 1rem;
-                    font-weight: 400;
-                }
-            }
         }
     }
-    .map-section {
-        img {
-            width: 100%;
+
+    .venue-info {
+        font-weight: 500;
+        line-height: 1;
+        margin-top: 10px;
+
+        .venue-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .venue-capacity {
+            font-size: 0.85rem;
+            font-weight: 400;
         }
     }
 }

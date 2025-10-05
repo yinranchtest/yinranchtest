@@ -12,15 +12,15 @@
         <button class="nav next" (click)="next()">&#10095;</button>
 
         <div class="dots">
-            <p>{{currentIndex}}/{{actualImages?.length}}</p>
+            <p>{{displayIndex}}/{{actualImages?.length}}</p>
         </div>
     </div>
 </div>
 <div class="lodging-extra-info container">
 
     <div class="amenities-section mb-5">
-        <h2 class="lodging-title">Poppy, bright and cheerful space</h2>
-        <p class="lodging-location text-muted mb-4">Toronto - Canada</p>
+        <h2 class="lodging-title mb-4">{{venueDetails?.name}}</h2>
+        <!-- <p class="lodging-location text-muted mb-4">Toronto - Canada</p> -->
 
         <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
             <div class="col"><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>

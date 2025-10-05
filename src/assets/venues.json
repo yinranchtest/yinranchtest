@@ -9,7 +9,8 @@
       "assets/venues/ampitheater/ampitheater-2.jpg",
       "assets/venues/ampitheater/ampitheater-3.jpg",
       "assets/venues/ampitheater/ampitheater-4.jpg",
-      "assets/venues/ampitheater/ampitheater-5.jpg"
+      "assets/venues/ampitheater/ampitheater-5.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -23,7 +24,8 @@
       "assets/venues/lakeGazebo/lake-gazebo-3.jpg",
       "assets/venues/lakeGazebo/lake-gazebo-4.jpg",
       "assets/venues/lakeGazebo/lake-gazebo-5.jpg",
-      "assets/venues/lakeGazebo/lake-gazebo-6.jpg"
+      "assets/venues/lakeGazebo/lake-gazebo-6.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -38,7 +40,8 @@
       "assets/venues/pavillion/the-pavillion-4.jpg",
       "assets/venues/pavillion/the-pavillion-5.jpg",
       "assets/venues/pavillion/the-pavillion-6.jpg",
-      "assets/venues/pavillion/the-pavillion-7.jpg"
+      "assets/venues/pavillion/the-pavillion-7.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -50,7 +53,8 @@
       "assets/venues/willowMeadow/meadow-1.jpg",
       "assets/venues/willowMeadow/meadow-2.jpg",
       "assets/venues/willowMeadow/meadow-3.jpg",
-      "assets/venues/willowMeadow/meadow-4.jpg"
+      "assets/venues/willowMeadow/meadow-4.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -62,7 +66,8 @@
       "assets/venues/overlook/overlook-1.jpg",
       "assets/venues/overlook/overlook-2.jpg",
       "assets/venues/overlook/overlook-3.jpg",
-      "assets/venues/overlook/overlook-4.jpg"
+      "assets/venues/overlook/overlook-4.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -73,7 +78,8 @@
     "images": [
       "assets/venues/winroom/winroom-1.jpg",
       "assets/venues/winroom/winroom-2.jpg",
-      "assets/venues/winroom/winroom-3.jpg"
+      "assets/venues/winroom/winroom-3.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -89,7 +95,8 @@
       "assets/venues/oliveGrove/olivegrove-5.jpg",
       "assets/venues/oliveGrove/olivegrove-6.jpg",
       "assets/venues/oliveGrove/olivegrove-7.jpg",
-      "assets/venues/oliveGrove/olivegrove-8.jpg"
+      "assets/venues/oliveGrove/olivegrove-8.jpg",
+      "assets/home/map.jpg"
     ]
   },
   {
@@ -102,7 +109,8 @@
       "assets/venues/oakHill/oakhill-3.jpg",
       "assets/venues/oakHill/oakhill-4.jpg",
       "assets/venues/oakHill/oakhill-5.jpg",
-      "assets/venues/oakHill/oakhill-6.jpg"
+      "assets/venues/oakHill/oakhill-6.jpg",
+      "assets/home/map.jpg"
     ]
   }
 ]
