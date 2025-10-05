@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Ampitheater",
     "capacity": 0,
-    "homePage": "assets/venues/ampitheater/ampitheater-3.jpg",
+    "homePage": "assets/venues/coverImgs/ampitheater.jpg",
     "images": [
       "assets/venues/ampitheater/ampitheater-1.jpg",
       "assets/venues/ampitheater/ampitheater-2.jpg",
@@ -16,7 +16,7 @@
     "id": 2,
     "name": "Lake Gazebo",
     "capacity": 0,
-    "homePage": "assets/venues/lakeGazebo/lake-gazebo-1.jpg",
+    "homePage": "assets/venues/coverImgs/lake-gazebo.jpg",
     "images": [
       "assets/venues/lakeGazebo/lake-gazebo-1.jpg",
       "assets/venues/lakeGazebo/lake-gazebo-2.jpg",
@@ -30,7 +30,7 @@
     "id": 3,
     "name": "Pavillion",
     "capacity": 0,
-    "homePage": "assets/venues/pavillion/the-pavillion-5.jpg",
+    "homePage": "assets/venues/coverImgs/the-pavillion.jpg",
     "images": [
       "assets/venues/pavillion/the-pavillion-1.jpg",
       "assets/venues/pavillion/the-pavillion-2.jpg",
@@ -45,7 +45,7 @@
     "id": 4,
     "name": "Willow Meadow",
     "capacity": 0,
-    "homePage": "assets/venues/willowMeadow/meadow-1.jpg",
+    "homePage": "assets/venues/coverImgs/meadow.jpg",
     "images": [
       "assets/venues/willowMeadow/meadow-1.jpg",
       "assets/venues/willowMeadow/meadow-2.jpg",
@@ -57,7 +57,7 @@
     "id": 5,
     "name": "Overlook",
     "capacity": 0,
-    "homePage": "assets/venues/overlook/overlook-4.jpg",
+    "homePage": "assets/venues/coverImgs/overlook.jpg",
     "images": [
       "assets/venues/overlook/overlook-1.jpg",
       "assets/venues/overlook/overlook-2.jpg",
@@ -67,9 +67,9 @@
   },
   {
     "id": 6,
-    "name": "Winroom",
+    "name": "Wineroom",
     "capacity": 0,
-    "homePage": "assets/venues/winroom/winroom-1.jpg",
+    "homePage": "assets/venues/coverImgs/wineroom.jpg",
     "images": [
       "assets/venues/winroom/winroom-1.jpg",
       "assets/venues/winroom/winroom-2.jpg",
@@ -80,7 +80,7 @@
     "id": 7,
     "name": "Olive Grove",
     "capacity": 0,
-    "homePage": "assets/venues/oliveGrove/olivegrove-1.jpg",
+    "homePage": "assets/venues/coverImgs/olivegrove.jpg",
     "images": [
       "assets/venues/oliveGrove/olivegrove-1.jpg",
       "assets/venues/oliveGrove/olivegrove-2.jpg",
@@ -98,7 +98,6 @@
     "capacity": 0,
     "homePage": "assets/venues/oakHill/oakhill-6.jpg",
     "images": [
-      "assets/venues/oakHill/oakhill-1.jpg",
       "assets/venues/oakHill/oakhill-2.jpg",
       "assets/venues/oakHill/oakhill-3.jpg",
       "assets/venues/oakHill/oakhill-4.jpg",
