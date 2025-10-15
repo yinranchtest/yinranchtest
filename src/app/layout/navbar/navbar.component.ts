@@ -16,6 +16,7 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent implements OnInit {
   isScrolled = false;
   isNonHomeRoute = false;
+  isMobileMenuOpen = false;
 
   constructor(private router: Router) { }
 
@@ -37,5 +38,19 @@ export class NavbarComponent implements OnInit {
 
   private checkRoute(url: string) {
     this.isNonHomeRoute = url !== '/';
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (this.isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
+    document.body.style.overflow = 'auto';
   }
 }

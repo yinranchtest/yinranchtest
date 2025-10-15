@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { VenuesService } from '../../../services/venues/venues.service';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-venue-detail',
@@ -23,6 +24,9 @@ export class VenueDetailComponent implements OnInit {
 
   currentIndex = 1;
   transitionEnabled = true;
+
+  expandedImage: string | null = null;
+  private modalInstance: Modal | null = null;
 
   constructor(private _route: ActivatedRoute, private _venueService: VenuesService) {
     this._route.params.subscribe(
@@ -97,8 +101,25 @@ export class VenueDetailComponent implements OnInit {
     if (this.currentIndex > actualLength) {
       return 1;
     }
-    
-    return 1; 
+
+    return 1;
+  }
+
+  openImage(img: string) {
+    this.expandedImage = img;
+
+    const modalElement = document.getElementById('imageModal');
+    if (modalElement) {
+      this.modalInstance = new Modal(modalElement, {
+        backdrop: 'static',
+        keyboard: true,
+      });
+      this.modalInstance.show();
+    }
+  }
+
+  closeImage() {
+    this.expandedImage = null;
   }
 
 }

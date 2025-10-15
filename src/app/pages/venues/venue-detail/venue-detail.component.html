@@ -4,7 +4,7 @@
         <div class="carousel-track" [class.no-transition]="!transitionEnabled"
             [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 20px) + 10%))'">
             <div class="carousel-item" *ngFor="let img of loopedImages">
-                <img [src]="img" alt="carousel image" />
+                <img [src]="img" alt="carousel image" (click)="openImage(img)" />
             </div>
         </div>
 
@@ -83,4 +83,18 @@
 
     </div>
 
+</div>
+
+
+<!-- Expand modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered image-modal-dialog">
+        <div class="modal-content zoom-animation">
+            <div class="modal-body image-modal-body">
+                <img [src]="expandedImage" alt="Expanded Image" class="modal-image" />
+            </div>
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+    </div>
 </div>

@@ -1,7 +1,8 @@
 <nav class="navbar" [class.scrolled]="isScrolled || isNonHomeRoute">
-    <div>
+    <div class="navbar-container">
         <div class="logo" [routerLink]="['/']">YIN RANCH</div>
-        <ul class="nav-links">
+        
+        <ul class="nav-links desktop-nav">
             <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
             <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
                 <a [routerLink]="['/venues']">Venues</a>
@@ -12,6 +13,47 @@
             <li routerLinkActive="active"><a [routerLink]="['/about-us']">Our Story</a></li>
             <li routerLinkActive="active"><a [routerLink]="['/contact-us']">Contact Us</a></li>
         </ul>
+        
+        <button class="custom-button-action desktop-cta" [routerLink]="['/contact-us']">GET STARTED</button>
+        
+        <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen" [class.menu-open]="isMobileMenuOpen">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </div>
-    <button class="custom-button-action" [routerLink]="['/contact-us']">GET STARTED</button>
+    
+    <div class="mobile-side-menu" [class.open]="isMobileMenuOpen">
+        <div class="mobile-menu-overlay" (click)="closeMobileMenu()"></div>
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">YIN RANCH</div>
+                <button class="close-menu" (click)="closeMobileMenu()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li routerLinkActive="active" (click)="closeMobileMenu()">
+                    <a [routerLink]="['/home']">Home</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }" (click)="closeMobileMenu()">
+                    <a [routerLink]="['/venues']">Venues</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }" (click)="closeMobileMenu()">
+                    <a [routerLink]="['/lodging']">Lodging</a>
+                </li>
+                <li routerLinkActive="active" (click)="closeMobileMenu()">
+                    <a [routerLink]="['/about-us']">Our Story</a>
+                </li>
+                <li routerLinkActive="active" (click)="closeMobileMenu()">
+                    <a [routerLink]="['/contact-us']">Contact Us</a>
+                </li>
+            </ul>
+            <div class="mobile-cta">
+                <button class="custom-button-action mobile-button" [routerLink]="['/contact-us']" (click)="closeMobileMenu()">
+                    GET STARTED
+                </button>
+            </div>
+        </div>
+    </div>
 </nav>

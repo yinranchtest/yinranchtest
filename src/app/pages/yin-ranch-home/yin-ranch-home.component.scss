@@ -7,10 +7,18 @@
   padding: 0px 30px;
   color: white;
   position: relative;
-  width: 100vw;
-  font-family: var(--font-family-standard);
   width: 100%;
+  font-family: var(--font-family-standard);
 
+  @media (max-width: 900px) {
+    height: 70vh;
+    padding: 0px 15px;
+  }
+
+  @media (max-width: 480px) {
+    height: 60vh;
+    padding: 0px 10px;
+  }
 }
 
 
@@ -23,12 +31,28 @@
 h1 {
   font-size: 52px;
   line-height: 1.2;
+
+  @media (max-width: 900px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 }
 
 p {
   margin-top: auto;
   font-size: 20px;
   font-family: var(--font-family-muli);
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 }
 
 
@@ -38,6 +62,14 @@ p {
   width: 100%;
   background-color: #fdfbf6;
   padding: 20px 0;
+
+  @media (max-width: 900px) {
+    padding: 15px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
+  }
 }
 
 .scrolling-wrapper {
@@ -52,6 +84,14 @@ p {
   user-select: none;
   will-change: transform;
   transition: transform 0.5s ease-in-out;
+
+  @media (max-width: 900px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 }
 
 .scroll-track.manual-scroll {
@@ -89,6 +129,22 @@ p {
   flex: 0 0 auto;
   width: 20%;
   text-align: center;
+  min-width: 250px; // Ensure minimum width for better mobile display
+
+  @media (max-width: 900px) {
+    width: 30%;
+    min-width: 200px;
+  }
+
+  @media (max-width: 600px) {
+    width: 40%;
+    min-width: 180px;
+  }
+
+  @media (max-width: 480px) {
+    width: 50%;
+    min-width: 160px;
+  }
 }
 
 .image-card img {
@@ -97,6 +153,18 @@ p {
   border-radius: 12px;
   object-fit: cover;
   pointer-events: none;
+
+  @media (max-width: 900px) {
+    height: 300px;
+  }
+
+  @media (max-width: 600px) {
+    height: 250px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
 }
 
 .scroll-btn {
@@ -112,6 +180,16 @@ p {
   border-radius: 50%;
   user-select: none;
   transition: background-color 0.3s ease;
+
+  @media (max-width: 900px) {
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+    font-size: 20px;
+  }
 }
 
 .scroll-btn:hover {
@@ -120,23 +198,65 @@ p {
 
 .scroll-btn.prev {
   left: 10px;
+
+  @media (max-width: 480px) {
+    left: 5px;
+  }
 }
 
 .scroll-btn.next {
   right: 10px;
+
+  @media (max-width: 480px) {
+    right: 5px;
+  }
 }
 
 .caption-text {
   text-wrap: wrap;
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 0 10px;
+
+  @media (max-width: 900px) {
+    font-size: 13px;
+    margin-top: 6px;
+    padding: 0 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin-top: 4px;
+    padding: 0 5px;
+  }
 }
 
 .info-section {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 200px;
+  flex-wrap: nowrap;
+  gap: 80px;
   padding: 40px 20px;
   background-color: #fff;
+
+  @media (max-width: 1200px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 1000px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px 10px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
+    padding: 15px 5px;
+  }
 }
 
 .info-box {
@@ -148,6 +268,21 @@ p {
   cursor: pointer;
   overflow: hidden;
   background-color: transparent;
+  flex-shrink: 0;
+
+  @media (max-width: 1200px) {
+    width: 180px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 160px;
+    padding: 15px;
+  }
+
+  @media (max-width: 900px) {
+    width: 200px;
+    padding: 20px;
+  }
 }
 
 .info-box img {
@@ -192,7 +327,17 @@ p {
   font-family: Ortica Light, serif;
   text-align: center;
   color: rgb(129, 139, 139);
-  margin-top: 90px;
+  margin-top: 60px;
+
+  @media (max-width: 900px) {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+    margin-top: 40px;
+  }
 }
 
 .text {
@@ -215,6 +360,15 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 300px;
+  }
 }
 
 .estate-section {
@@ -222,26 +376,85 @@ p {
   text-align: center;
   padding: 60px 20px;
   font-family: 'Georgia', 'Times New Roman', serif;
+
+  .row {
+    @media (max-width: 1199px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 40px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 10px;
+  }
 }
 
 .estate-image-wrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  @media (max-width: 1199px) {
+    margin-bottom: 30px;
+    order: 1;
+  }
+
+  @media (max-width: 900px) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 }
 
 .estate-image-wrapper img {
   width: 70%;
-  // max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   margin: 30px;
+
+  @media (max-width: 900px) {
+    width: 90%;
+    margin: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    margin: 15px;
+  }
 }
 
-.estate-description p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #4a4a4a;
+.estate-description {
+  @media (max-width: 1199px) {
+    order: 2;
+    margin-top: 0;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a4a4a;
+
+    @media (max-width: 1199px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      padding: 0 15px;
+    }
+  }
 }
