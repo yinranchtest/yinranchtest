@@ -118,6 +118,16 @@
     // margin: auto;
     overflow: hidden;
     margin-top: 90px;
+    
+    @media (max-width: 768px) {
+        height: 400px;
+        margin-top: 70px;
+    }
+    
+    @media (max-width: 480px) {
+        height: 300px;
+        margin-top: 60px;
+    }
 }
 
 .carousel-track {
@@ -132,6 +142,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @media (max-width: 768px) {
+        flex: 0 0 85%;
+        margin: 0 7.5px;
+    }
+    
+    @media (max-width: 480px) {
+        flex: 0 0 90%;
+        margin: 0 5px;
+    }
 }
 
 .carousel-item img {

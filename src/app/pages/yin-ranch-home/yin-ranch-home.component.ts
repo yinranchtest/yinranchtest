@@ -18,16 +18,16 @@ export class YinRanchHomeComponent implements OnInit, OnDestroy {
   private topManualScrollActive = false;
   private bottomManualScrollActive = false;
   topImages = [
-    { url: 'assets/home/rotatingImage1/img1.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/home/rotatingImage1/img2.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/home/rotatingImage1/img3.jpg', caption: 'The bathhouse at sunset, where the water runs directly into the garden.' },
-    { url: 'assets/home/rotatingImage1/img4.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img5.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img6.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img7.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img8.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img9.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' },
-    { url: 'assets/home/rotatingImage1/img10.jpg', caption: 'We worship the Tomato. We even made one of our favorite candles inspired by its ripe, supple, bursting scent.' }
+    { url: 'assets/home/rotatingImage1/img1.jpg', caption: 'Creek Cottage: A place like home.' },
+    { url: 'assets/home/rotatingImage1/img2.jpg', caption: 'Hit a hole in one on our 4 hole, mini-golf course.' },
+    { url: 'assets/home/rotatingImage1/img3.jpg', caption: 'Our vineyard is anything but dry. Experience a mini wine country in Yin Ranch.' },
+    { url: 'assets/home/rotatingImage1/img4.jpg', caption: 'Wishes do come true. A grand fountain greets you and your guests to Yin Ranch.' },
+    { url: 'assets/home/rotatingImage1/img5.jpg', caption: 'Wave to your kids in the tunnels of the play place. ' },
+    { url: 'assets/home/rotatingImage1/img6.jpg', caption: 'Meet your match on the court. Yin Ranch features full sized tennis, basketball, volleyball and soccer courts that turn guests into teams.' },
+    { url: 'assets/home/rotatingImage1/img7.jpg', caption: 'Take in the moment. Tune into the tranquil nature that surrounds Yin Ranch.' },
+    { url: 'assets/home/rotatingImage1/img8.jpg', caption: 'Behold, the pavilion. Our largest accommodating venue, ready to be yours.' },
+    { url: 'assets/home/rotatingImage1/img9.jpg', caption: 'Wishes do come true. A grand fountain greets you and your guests to Yin Ranch.' },
+    { url: 'assets/home/rotatingImage1/img10.jpg', caption: 'Make our creek house a home. Book a stay in our private lodging fit for families and large groups.'}
   ];
   bottomImages = [
     'assets/home/rotatingImage2/img1.jpg',

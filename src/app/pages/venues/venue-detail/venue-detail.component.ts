@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { VenuesService } from '../../../services/venues/venues.service';
@@ -24,6 +24,7 @@ export class VenueDetailComponent implements OnInit {
 
   currentIndex = 1;
   transitionEnabled = true;
+  windowWidth = window.innerWidth;
 
   expandedImage: string | null = null;
   private modalInstance: Modal | null = null;
@@ -37,6 +38,34 @@ export class VenueDetailComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getvenueDetailsById()
+    this.updateWindowWidth()
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.updateWindowWidth();
+  }
+
+  updateWindowWidth() {
+    this.windowWidth = window.innerWidth;
+  }
+
+  getCarouselTransform(): string {
+    let itemWidth: number;
+    let margin: number;
+    
+    if (this.windowWidth <= 480) {
+      itemWidth = 90;
+      margin = 5;
+    } else if (this.windowWidth <= 768) {
+      itemWidth = 85;
+      margin = 7.5;
+    } else {
+      itemWidth = 80;
+      margin = 10;
+    }
+    
+    return `translateX(calc(-${this.currentIndex} * (${itemWidth}% + ${margin * 2}px) + ${(100 - itemWidth) / 2}%))`;
   }
 
   getvenueDetailsById() {

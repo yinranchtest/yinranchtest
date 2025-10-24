@@ -2,7 +2,7 @@
 
     <div class="carousel-container">
         <div class="carousel-track" [class.no-transition]="!transitionEnabled"
-            [style.transform]="'translateX(calc(-' + currentIndex + ' * (80% + 20px) + 10%))'">
+            [style.transform]="getCarouselTransform()">
             <div class="carousel-item" *ngFor="let img of loopedImages">
                 <img [src]="img" alt="carousel image" (click)="openImage(img)" />
             </div>
