@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Ampitheater",
+    "subtitle":"Make a scene. A space that is larger than life.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/ampitheater.jpg",
     "images": [
@@ -11,11 +12,27 @@
       "assets/venues/ampitheater/ampitheater-4.jpg",
       "assets/venues/ampitheater/ampitheater-5.jpg",
       "assets/home/map.jpg"
-    ]
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Space 5,500 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Stage 832 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Total 6,320 sq feet"
+      }
+    ],
+    "amenities": []
   },
   {
     "id": 2,
     "name": "Lake Gazebo",
+    "subtitle":"Willow trees set the stage of our picturesque lakeside gazebo.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/lake-gazebo.jpg",
     "images": [
@@ -26,11 +43,18 @@
       "assets/venues/lakeGazebo/lake-gazebo-5.jpg",
       "assets/venues/lakeGazebo/lake-gazebo-6.jpg",
       "assets/home/map.jpg"
-    ]
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Space 4,400 sq feet"
+      }],
+    "amenities": []
   },
   {
     "id": 3,
     "name": "Pavillion",
+    "subtitle":"A versatile, spacious pavilion. ",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/the-pavillion.jpg",
     "images": [
@@ -42,11 +66,52 @@
       "assets/venues/pavillion/the-pavillion-6.jpg",
       "assets/venues/pavillion/the-pavillion-7.jpg",
       "assets/home/map.jpg"
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Hall 9,450 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Prep Room 775 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Kitchen 1,840 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Exterior 10,850 feet"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "1 ADA bathroom"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "1 ADA Dressing room"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "3 LED Screen"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Stage"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Full Kitchen with prep room"
+      }
     ]
   },
   {
     "id": 4,
     "name": "Willow Meadow",
+    "subtitle":"Where flowers bloom and energy gathers.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/meadow.jpg",
     "images": [
@@ -55,11 +120,35 @@
       "assets/venues/willowMeadow/meadow-3.jpg",
       "assets/venues/willowMeadow/meadow-4.jpg",
       "assets/home/map.jpg"
-    ]
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Main Area 25,650 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Side Area 7,175 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Deck 910 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Deck 910 sq feet"
+      },
+      {
+        "icon":"bi bi-check2-circle",
+        "name":"Total 36,585 sq feet"
+      }
+    ],
+    "amenities": []
   },
   {
     "id": 5,
     "name": "Overlook",
+    "subtitle":"Look over the edge, a panoramic view that makes the perfect backdrop.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/overlook.jpg",
     "images": [
@@ -68,11 +157,18 @@
       "assets/venues/overlook/overlook-3.jpg",
       "assets/venues/overlook/overlook-4.jpg",
       "assets/home/map.jpg"
+    ],
+    "lodgingDetails":[
+      {
+        "icon":"bi bi-check2-circle",
+        "name":"Space 2,576 sq feet"
+      }
     ]
   },
   {
     "id": 6,
     "name": "Wineroom",
+    "subtitle":"A tasting room that enhances all the senses.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/wineroom.jpg",
     "images": [
@@ -80,11 +176,35 @@
       "assets/venues/winroom/winroom-2.jpg",
       "assets/venues/winroom/winroom-3.jpg",
       "assets/home/map.jpg"
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Interior Space 1,685 feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Exterior 4,815 feet"
+      }],
+    "amenities": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Full bar"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Full Sink"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "4 Bathrooms"
+      }
     ]
   },
   {
     "id": 7,
     "name": "Olive Grove",
+    "subtitle":"Enchanting tuscan courtyard.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/olivegrove.jpg",
     "images": [
@@ -97,11 +217,35 @@
       "assets/venues/oliveGrove/olivegrove-7.jpg",
       "assets/venues/oliveGrove/olivegrove-8.jpg",
       "assets/home/map.jpg"
-    ]
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Space 19,200 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Stage 750 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Trail 8500 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Cater Area 1,040 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Total Area 29,500 sq feet"
+      }
+    ],
+    "amenities": []
   },
   {
     "id": 8,
     "name": "OakHill",
+    "subtitle":"Feel on top of the world.",
     "capacity": 0,
     "homePage": "assets/venues/oakHill/oakhill-6.jpg",
     "images": [
@@ -111,6 +255,30 @@
       "assets/venues/oakHill/oakhill-5.jpg",
       "assets/venues/oakHill/oakhill-6.jpg",
       "assets/home/map.jpg"
+    ],
+    "lodgingDetails": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Exterior 15,233 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Dressing room 165 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Hall 2,500 sq feet"
+      },
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "Full bar area 350 sq feet"
+      }
+    ],
+    "amenities": [
+      {
+        "icon": "bi bi-check2-circle",
+        "name": "2 ADA Bathrooms"
+      }
     ]
   }
 ]

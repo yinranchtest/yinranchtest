@@ -79,8 +79,16 @@
     text-align: center;
     font-size: 14px;
 
+    @media (max-width: 768px) {
+        padding: 35px 20px;
+    }
+
     @media (max-width: 600px) {
-        padding: 30px 15px;
+        padding: 25px 15px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 10px;
     }
 
     .footer-top {
@@ -92,7 +100,8 @@
         @media (max-width: 600px) {
             flex-direction: column;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
+            padding-bottom: 20px;
         }
 
         .footer-column {
@@ -102,7 +111,9 @@
                 margin: 0;
                 width: 100%;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
             h3 {
@@ -137,12 +148,52 @@
                     }
                 }
             }
+
+            p {
+                margin: 15px 0 0 0;
+                font-family: var(--font-family-muli);
+                font-size: 18px;
+                font-weight: 600;
+                color: #000;
+                letter-spacing: 0.5px;
+                line-height: 1.4;
+
+                i {
+                    color: #ba9b62;
+                    // border-right: 2px solid;
+                    // margin-right: 10px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    margin: 12px 0 0 0;
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                    margin: 8px 0 0 0;
+                    font-weight: 600;
+                    letter-spacing: 0.3px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 15px;
+                    margin: 6px 0 0 0;
+                }
+            }
         }
     }
 
     .footer-bottom {
         color: #aaaca5;
         margin-top: 20px;
+
+        @media (max-width: 600px) {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 12px;
+        }
 
         p {
             font-family: var(--font-family-muli);
@@ -152,15 +203,33 @@
             line-height: 1.7em;
             text-transform: none;
 
-
+            @media (max-width: 600px) {
+                line-height: 1.5em;
+            }
         }
 
         .description {
             font-size: 16px;
+
+            @media (max-width: 600px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 13px;
+            }
         }
 
         .bottom-text {
             font-size: 12px;
+
+            @media (max-width: 600px) {
+                font-size: 11px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 10px;
+            }
         }
 
         .phone {

@@ -19,23 +19,30 @@
 <div class="lodging-extra-info container">
 
     <div class="amenities-section mb-5">
-        <h2 class="lodging-title mb-4">{{venueDetails?.name}}</h2>
-        <!-- <p class="lodging-location text-muted mb-4">Toronto - Canada</p> -->
+        <h2 class="lodging-title mb-2">{{venueDetails?.name}}</h2>
+        <p class="lodging-location text-muted mb-4">{{venueDetails?.subtitle}}</p>
 
         <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
-            <div class="col"><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>
+            <div class="col"  *ngFor="let details of venueDetails?.lodgingDetails">
+                <i class={{details?.icon}}></i> {{details?.name}}
+            </div>
+            <!-- <div class="col"><i class="bi bi-door-closed me-2"></i> 1 Bedroom</div>
             <div class="col"><i class="bi bi-door-closed me-2"></i> 1.5 Bathrooms</div>
             <div class="col"><i class="bi bi-laptop me-2"></i> 2 Workspaces</div>
             <div class="col"><i class="bi bi-moon me-2"></i> 1 Bed</div>
             <div class="col"><i class="bi bi-people-fill me-2"></i> 2 Guest max</div>
-            <div class="col"><i class="bi bi-people-fill me-2"></i> Pets on request</div>
+            <div class="col"><i class="bi bi-people-fill me-2"></i> Pets on request</div> -->
         </div>
     </div>
 
-    <div class="amenities-section mb-5">
+    <div class="amenities-section mb-5" *ngIf="venueDetails?.amenities?.length">
         <h4 class="section-title mb-3"><b>Amenities</b></h4>
         <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
-            <div class="col"><i class="bi bi-wifi"></i> 1000-250 Mbps internet Good</div>
+            <div class="col" *ngFor="let details of venueDetails?.amenities">
+                <i class={{details?.icon}}></i> {{details?.name}}
+            </div>
+
+            <!-- <div class="col"><i class="bi bi-wifi"></i> 1000-250 Mbps internet Good</div>
             <div class="col"><i class="bi bi-car-front"></i> Parking - Paid street</div>
             <div class="col"><i class="bi bi-sun"></i> Patio or balcony</div>
             <div class="col"><i class="bi bi-snow2"></i> Air conditioning</div>
@@ -47,7 +54,7 @@
             <div class="col"><i class="bi bi-box"></i> Iron</div>
             <div class="col"><i class="bi bi-droplet"></i> Dishwasher</div>
             <div class="col"><i class="bi bi-scissors"></i> Hair dryer</div>
-            <div class="col"><i class="bi bi-cup-hot"></i> Coffee or espresso maker</div>
+            <div class="col"><i class="bi bi-cup-hot"></i> Coffee or espresso maker</div> -->
         </div>
     </div>
 

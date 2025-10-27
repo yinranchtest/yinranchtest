@@ -18,8 +18,8 @@
 
     <div class="lodging-extra-info container">
 
-        <h2 class="lodging-title mb-4">{{lodgingDetails?.name}}</h2>
-        <!-- <p class="lodging-location text-muted mb-4">Toronto - Canada</p> -->
+        <h2 class="lodging-title mb-2">{{lodgingDetails?.name}}</h2>
+        <p class="lodging-location text-muted mb-4">{{lodgingDetails?.subtitle}}</p>
 
         <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
             <div class="col" *ngFor="let details of lodgingDetails?.lodgingDetails">
