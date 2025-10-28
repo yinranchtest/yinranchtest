@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Creek Cottage",
+    "subtitle": "Charming cottage, reimagined.",
     "capacity": 8,
     "lodgingDetails": [
       {
@@ -80,6 +81,7 @@
   {
     "id": 2,
     "name": "Creek House Lodging",
+    "subtitle":"Spacious, two-story farmhouse villa.",
     "capacity": 22,
     "lodgingDetails": [
       {
@@ -191,6 +193,7 @@
   {
     "id": 3,
     "name": "Redwood Village Lodging #1",
+    "subtitle":"A cozy cabin with a modern twist.",
     "capacity": 4,
     "lodgingDetails": [
       {
@@ -262,6 +265,7 @@
   {
     "id": 4,
     "name": "Redwood Village Lodging #2",
+    "subtitle":"Bright, uplifting cabin under a redwood canopy",
     "capacity": 6,
     "lodgingDetails": [
       {
@@ -339,6 +343,7 @@
   {
     "id": 5,
     "name": "Redwood Village Lodging #3",
+    "subtitle":"-Quaint cabin with porch seating",
     "capacity": 13,
     "lodgingDetails": [
       {
@@ -427,6 +432,7 @@
   {
     "id": 6,
     "name": "Redwood Village Lodging #4",
+    "subtitle":"Cabin gem with an outdoor fire pit",
     "capacity": 4,
     "lodgingDetails": [
       {
@@ -501,6 +507,7 @@
   {
     "id": 7,
     "name": "Redwood Village Lodging #5",
+    "subtitle":"-Relax and reset amongst the redwoods.",
     "capacity": 12,
     "lodgingDetails": [
       {
@@ -574,6 +581,7 @@
   {
     "id": 8,
     "name": "Redwood Village Lodging #6",
+    "subtitle":"Rustic charm meets modern amenities.",
     "capacity": 5,
     "lodgingDetails": [
       {
