@@ -231,16 +231,6 @@
                 font-size: 10px;
             }
         }
-
-        .phone {
-            color: #f6a18c;
-            border-color: rgba(240, 147, 132, .15);
-
-            &:hover {
-                color: rgba(240, 147, 132, .6);
-                transition: border-color .15s ease-out, color .15s ease-out;
-            }
-        }
     }
 
     hr {

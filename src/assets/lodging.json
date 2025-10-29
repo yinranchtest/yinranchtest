@@ -265,7 +265,7 @@
   {
     "id": 4,
     "name": "Redwood Village Lodging #2",
-    "subtitle":"Bright, uplifting cabin under a redwood canopy",
+    "subtitle":"Bright, uplifting cabin under a redwood canopy.",
     "capacity": 6,
     "lodgingDetails": [
       {
@@ -343,31 +343,31 @@
   {
     "id": 5,
     "name": "Redwood Village Lodging #3",
-    "subtitle":"-Quaint cabin with porch seating",
+    "subtitle":"Quaint cabin with porch seating.",
     "capacity": 13,
     "lodgingDetails": [
       {
-        "icon": "bi bi-door-closed",
+        "icon": "bi bi-door-closed me-2",
         "name": "4 Beds"
       },
       {
-        "icon": "bi bi-badge-wc",
+        "icon": "bi bi-badge-wc me-2",
         "name": "2 Bath"
       },
       {
-        "icon": "bi bi-person-hearts",
+        "icon": "bi bi-person-hearts me-2",
         "name": "2 King Beds"
       },
       {
-        "icon": "bi bi-moon-stars",
+        "icon": "fa-solid fa-bed",
         "name": "1 Day Bed"
       },
       {
-        "icon": "bi bi-person-hearts",
+        "icon": "bi bi-person-hearts me-2",
         "name": "1 Queen Bed"
       },
       {
-        "icon": "bi bi-people",
+        "icon": "bi bi-people me-2",
         "name": "Sleeps 13"
       }
     ],
@@ -432,7 +432,7 @@
   {
     "id": 6,
     "name": "Redwood Village Lodging #4",
-    "subtitle":"Cabin gem with an outdoor fire pit",
+    "subtitle":"Cabin gem with an outdoor fire pit.",
     "capacity": 4,
     "lodgingDetails": [
       {
