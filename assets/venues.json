@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Ampitheater",
+    "name": "Amphitheater",
     "subtitle":"Make a scene. A space that is larger than life.",
-    "capacity": 0,
+    "capacity": 300,
     "homePage": "assets/venues/coverImgs/ampitheater.jpg",
     "images": [
       "assets/venues/ampitheater/ampitheater-1.jpg",
@@ -31,9 +31,9 @@
   },
   {
     "id": 2,
-    "name": "Lake Gazebo",
+    "name": "Lakeside Gazabo",
     "subtitle":"Willow trees set the stage of our picturesque lakeside gazebo.",
-    "capacity": 0,
+    "capacity": 150,
     "homePage": "assets/venues/coverImgs/lake-gazebo.jpg",
     "images": [
       "assets/venues/lakeGazebo/lake-gazebo-1.jpg",
@@ -53,9 +53,9 @@
   },
   {
     "id": 3,
-    "name": "Pavillion",
+    "name": "The Pavilion",
     "subtitle":"A versatile, spacious pavilion. ",
-    "capacity": 0,
+    "capacity": 400,
     "homePage": "assets/venues/coverImgs/the-pavillion.jpg",
     "images": [
       "assets/venues/pavillion/the-pavillion-1.jpg",
@@ -112,7 +112,7 @@
     "id": 4,
     "name": "Willow Meadow",
     "subtitle":"Where flowers bloom and energy gathers.",
-    "capacity": 0,
+    "capacity": 400,
     "homePage": "assets/venues/coverImgs/meadow.jpg",
     "images": [
       "assets/venues/willowMeadow/meadow-1.jpg",
@@ -147,9 +147,9 @@
   },
   {
     "id": 5,
-    "name": "Overlook",
+    "name": "Vineyard Overlook",
     "subtitle":"Look over the edge, a panoramic view that makes the perfect backdrop.",
-    "capacity": 0,
+    "capacity": 200,
     "homePage": "assets/venues/coverImgs/overlook.jpg",
     "images": [
       "assets/venues/overlook/overlook-1.jpg",
@@ -167,7 +167,7 @@
   },
   {
     "id": 6,
-    "name": "Wineroom",
+    "name": "Wine Room",
     "subtitle":"A tasting room that enhances all the senses.",
     "capacity": 0,
     "homePage": "assets/venues/coverImgs/wineroom.jpg",
@@ -203,9 +203,9 @@
   },
   {
     "id": 7,
-    "name": "Olive Grove",
+    "name": "Olive Grove Courtyard",
     "subtitle":"Enchanting tuscan courtyard.",
-    "capacity": 0,
+    "capacity": 400,
     "homePage": "assets/venues/coverImgs/olivegrove.jpg",
     "images": [
       "assets/venues/oliveGrove/olivegrove-1.jpg",
@@ -244,9 +244,9 @@
   },
   {
     "id": 8,
-    "name": "OakHill",
+    "name": "Oakhill Event Center",
     "subtitle":"Feel on top of the world.",
-    "capacity": 0,
+    "capacity": 250,
     "homePage": "assets/venues/oakHill/oakhill-6.jpg",
     "images": [
       "assets/venues/oakHill/oakhill-2.jpg",
