@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { ContactService } from '../../services/contact/contact.service';
 import { AlertService } from '../../services/alert/alert.service';
 import { AlertComponent } from '../alert/alert.component';
@@ -13,7 +12,6 @@ import { AlertComponent } from '../alert/alert.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleMapsModule,
     AlertComponent
   ],
   templateUrl: './contact.component.html',
@@ -24,16 +22,15 @@ export class ContactComponent implements OnInit {
   submitted: boolean = false
   currentStep = 1;
   contactForm: FormGroup
-  center: google.maps.LatLngLiteral = { lat: 38.363161117860884, lng: -122.02977666542918 };
 
   constructor(private fb: FormBuilder, private _contact: ContactService,
     private _alertService: AlertService
   ) {
     this.contactForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$")]],
       firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
       lastName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
-      phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern("^[0-9]{10}$")]],
       isOverNightLodging: [''],
       estimatedGuest: [''],
       eventName: [''],

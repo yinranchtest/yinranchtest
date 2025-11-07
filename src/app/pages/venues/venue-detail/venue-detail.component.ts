@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener } from '@angular/core';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { VenuesService } from '../../../services/venues/venues.service';
 import { Modal } from 'bootstrap';
@@ -10,15 +9,13 @@ import { Modal } from 'bootstrap';
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule,
-    GoogleMapsModule
+    RouterModule
   ],
   templateUrl: './venue-detail.component.html',
   styleUrl: './venue-detail.component.scss'
 })
 export class VenueDetailComponent implements OnInit {
 
-  center: google.maps.LatLngLiteral = { lat: 38.363161117860884, lng: -122.02977666542918 };
   venueId: any
   venueDetails: any
 

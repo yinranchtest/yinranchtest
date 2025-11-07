@@ -19,6 +19,9 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private bottomManualScrollActive = false;
   private wheelHandlers: Array<() => void> = [];
   private touchHandlers: Array<() => void> = [];
+  private lastWheelTime = 0;
+  private wheelThrottleDelay = 400; 
+  private accumulatedWheelDelta = { top: 0, bottom: 0 };
   topImages = [
     { url: 'assets/home/rotatingImage1/img1.jpg', caption: 'Creek Cottage: A place like home.' },
     { url: 'assets/home/rotatingImage1/img2.jpg', caption: 'Hit a hole in one on our 4 hole, mini-golf course.' },
@@ -75,7 +78,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private startSeamlessScrolling(): void {
     const scrollTracks = document.querySelectorAll('.scroll-track');
-    const scrollSpeed = 0.5; 
+    const scrollSpeed = 0.3; 
 
     const animate = () => {
       if (!this.isPaused) {
@@ -91,6 +94,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             }
             
             trackElement.style.transform = `translateX(-${this.topScrollPosition}px)`;
+            trackElement.style.transition = 'none';
           } else if (index === 1 && !this.bottomManualScrollActive) {
             this.bottomScrollPosition += scrollSpeed;
             
@@ -99,6 +103,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             }
             
             trackElement.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
+            trackElement.style.transition = 'none';
           }
         });
       }
@@ -138,6 +143,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     scrollingWrappers.forEach((wrapper: Element, index: number) => {
       const handler = (event: Event) => {
         const wheelEvent = event as WheelEvent;
+        const currentTime = Date.now();
         
         const horizontalDelta = Math.abs(wheelEvent.deltaX);
         const verticalDelta = Math.abs(wheelEvent.deltaY);
@@ -145,19 +151,21 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         if (horizontalDelta > verticalDelta && horizontalDelta > 10) {
           wheelEvent.preventDefault();
           
-          const scrollDelta = wheelEvent.deltaX;
+          if (currentTime - this.lastWheelTime < this.wheelThrottleDelay) {
+            return;
+          }
+          this.lastWheelTime = currentTime;
           
-          if (index === 0) {
-            if (scrollDelta > 0) {
-              this.scrollTopNext();
-            } else {
-              this.scrollTopPrev();
-            }
-          } else if (index === 1) {
-            if (scrollDelta > 0) {
-              this.scrollBottomNext();
-            } else {
-              this.scrollBottomPrev();
+          const track = wrapper.querySelector('.scroll-track') as HTMLElement;
+          if (track) {
+            const cardWidth = this.getImageCardWidth(track);
+            const scrollDelta = wheelEvent.deltaX;
+            const scrollAmount = scrollDelta > 0 ? cardWidth : -cardWidth;
+          
+            if (index === 0) {
+              this.smoothScrollTop(scrollAmount);
+            } else if (index === 1) {
+              this.smoothScrollBottom(scrollAmount);
             }
           }
         }
@@ -171,6 +179,82 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  private smoothScrollTop(delta: number): void {
+    const topTrack = document.querySelectorAll('.scroll-track')[0] as HTMLElement;
+    if (topTrack && !this.topManualScrollActive) {
+      this.topManualScrollActive = true;
+      this.isPaused = true;
+      
+      const trackWidth = topTrack.scrollWidth / 2;
+      this.topScrollPosition += delta;
+      
+      if (this.topScrollPosition >= trackWidth) {
+        topTrack.style.transition = 'none';
+        this.topScrollPosition = this.topScrollPosition - trackWidth;
+        topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
+        
+        setTimeout(() => {
+          topTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }, 10);
+      } else if (this.topScrollPosition < 0) {
+        topTrack.style.transition = 'none';
+        this.topScrollPosition = trackWidth + this.topScrollPosition;
+        topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
+        
+        setTimeout(() => {
+          topTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }, 10);
+      } else {
+        topTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
+      }
+      
+      setTimeout(() => {
+        this.topManualScrollActive = false;
+        this.isPaused = false;
+        topTrack.style.transition = 'none';
+      }, 550);
+    }
+  }
+
+  private smoothScrollBottom(delta: number): void {
+    const bottomTrack = document.querySelectorAll('.scroll-track')[1] as HTMLElement;
+    if (bottomTrack && !this.bottomManualScrollActive) {
+      this.bottomManualScrollActive = true;
+      this.isPaused = true;
+      
+      const trackWidth = bottomTrack.scrollWidth / 2;
+      this.bottomScrollPosition += delta;
+      
+      if (this.bottomScrollPosition >= trackWidth) {
+        bottomTrack.style.transition = 'none';
+        this.bottomScrollPosition = this.bottomScrollPosition - trackWidth;
+        bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
+        
+        setTimeout(() => {
+          bottomTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }, 10);
+      } else if (this.bottomScrollPosition < 0) {
+        bottomTrack.style.transition = 'none';
+        this.bottomScrollPosition = trackWidth + this.bottomScrollPosition;
+        bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
+        
+        setTimeout(() => {
+          bottomTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }, 10);
+      } else {
+        bottomTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
+      }
+      
+      setTimeout(() => {
+        this.bottomManualScrollActive = false;
+        this.isPaused = false;
+        bottomTrack.style.transition = 'none';
+      }, 550);
+    }
+  }
+
   private setupTouchScrolling(): void {
     const scrollingWrappers = document.querySelectorAll('.scrolling-wrapper');
     scrollingWrappers.forEach((wrapper: Element, index: number) => {
@@ -180,6 +264,8 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       let touchEndY = 0;
       let touchStartTime = 0;
       let isHorizontalSwipe = false;
+      let isDragging = false;
+      let currentScrollPosition = 0;
 
       const touchStartHandler = (event: Event) => {
         const touchEvent = event as TouchEvent;
@@ -188,6 +274,16 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           touchStartY = touchEvent.touches[0].clientY;
           touchStartTime = Date.now();
           isHorizontalSwipe = false;
+          isDragging = false;
+          
+          const track = wrapper.querySelector('.scroll-track') as HTMLElement;
+          if (track) {
+            if (index === 0) {
+              currentScrollPosition = this.topScrollPosition;
+            } else {
+              currentScrollPosition = this.bottomScrollPosition;
+            }
+          }
         }
       };
 
@@ -199,7 +295,35 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           
           if (deltaX > deltaY && deltaX > 10) {
             isHorizontalSwipe = true;
+            isDragging = true;
             event.preventDefault();
+            
+            const track = wrapper.querySelector('.scroll-track') as HTMLElement;
+            if (track) {
+              const dragDelta = touchStartX - touchEvent.touches[0].clientX;
+              const newPosition = currentScrollPosition + dragDelta;
+              const trackWidth = track.scrollWidth / 2;
+              
+              let adjustedPosition = newPosition;
+              if (adjustedPosition >= trackWidth) {
+                adjustedPosition = adjustedPosition - trackWidth;
+              } else if (adjustedPosition < 0) {
+                adjustedPosition = trackWidth + adjustedPosition;
+              }
+              
+              track.style.transition = 'none';
+              track.style.transform = `translateX(-${adjustedPosition}px)`;
+              
+              if (index === 0) {
+                this.topScrollPosition = adjustedPosition;
+                this.topManualScrollActive = true;
+                this.isPaused = true;
+              } else {
+                this.bottomScrollPosition = adjustedPosition;
+                this.bottomManualScrollActive = true;
+                this.isPaused = true;
+              }
+            }
           }
         }
       };
@@ -218,7 +342,22 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           const horizontalDistance = Math.abs(swipeDistanceX);
           const verticalDistance = Math.abs(swipeDistanceY);
           
-          if (isHorizontalSwipe && horizontalDistance > verticalDistance && horizontalDistance > 50 && swipeTime < 300) {
+          const track = wrapper.querySelector('.scroll-track') as HTMLElement;
+          
+          if (isDragging && track) {
+            track.style.transition = 'transform 0.3s ease-out';
+            
+            setTimeout(() => {
+              if (index === 0) {
+                this.topManualScrollActive = false;
+                this.isPaused = false;
+              } else {
+                this.bottomManualScrollActive = false;
+                this.isPaused = false;
+              }
+              track.style.transition = 'none';
+            }, 300);
+          } else if (isHorizontalSwipe && horizontalDistance > verticalDistance && horizontalDistance > 50 && swipeTime < 300) {
             if (index === 0) {
               if (swipeDistanceX > 0) {
                 this.scrollTopNext();
@@ -252,6 +391,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const topTrack = document.querySelectorAll('.scroll-track')[0] as HTMLElement;
     if (topTrack) {
       this.topManualScrollActive = true;
+      this.isPaused = true;
       
       topTrack.classList.remove('auto-scroll');
       topTrack.classList.add('manual-scroll');
@@ -267,17 +407,20 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
         
         setTimeout(() => {
-          topTrack.style.transition = '';
+          topTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         }, 10);
       } else {
+        topTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
       }
       
       setTimeout(() => {
         this.topManualScrollActive = false;
+        this.isPaused = false;
         topTrack.classList.remove('manual-scroll');
         topTrack.classList.add('auto-scroll');
-      }, 850);
+        topTrack.style.transition = 'none';
+      }, 650);
     }
   }
 
@@ -285,6 +428,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const topTrack = document.querySelectorAll('.scroll-track')[0] as HTMLElement;
     if (topTrack) {
       this.topManualScrollActive = true;
+      this.isPaused = true;
       
       topTrack.classList.remove('auto-scroll');
       topTrack.classList.add('manual-scroll');
@@ -300,17 +444,20 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
         
         setTimeout(() => {
-          topTrack.style.transition = '';
+          topTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         }, 10);
       } else {
+        topTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         topTrack.style.transform = `translateX(-${this.topScrollPosition}px)`;
       }
       
       setTimeout(() => {
         this.topManualScrollActive = false;
+        this.isPaused = false;
         topTrack.classList.remove('manual-scroll');
         topTrack.classList.add('auto-scroll');
-      }, 850);
+        topTrack.style.transition = 'none';
+      }, 650);
     }
   }
 
@@ -318,6 +465,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const bottomTrack = document.querySelectorAll('.scroll-track')[1] as HTMLElement;
     if (bottomTrack) {
       this.bottomManualScrollActive = true;
+      this.isPaused = true;
       
       bottomTrack.classList.remove('auto-scroll');
       bottomTrack.classList.add('manual-scroll');
@@ -333,17 +481,20 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
         
         setTimeout(() => {
-          bottomTrack.style.transition = '';
+          bottomTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         }, 10);
       } else {
+        bottomTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
       }
       
       setTimeout(() => {
         this.bottomManualScrollActive = false;
+        this.isPaused = false;
         bottomTrack.classList.remove('manual-scroll');
         bottomTrack.classList.add('auto-scroll');
-      }, 850);
+        bottomTrack.style.transition = 'none';
+      }, 650);
     }
   }
 
@@ -351,6 +502,7 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const bottomTrack = document.querySelectorAll('.scroll-track')[1] as HTMLElement;
     if (bottomTrack) {
       this.bottomManualScrollActive = true;
+      this.isPaused = true;
       
       bottomTrack.classList.remove('auto-scroll');
       bottomTrack.classList.add('manual-scroll');
@@ -366,17 +518,20 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
         
         setTimeout(() => {
-          bottomTrack.style.transition = '';
+          bottomTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         }, 10);
       } else {
+        bottomTrack.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         bottomTrack.style.transform = `translateX(-${this.bottomScrollPosition}px)`;
       }
       
       setTimeout(() => {
         this.bottomManualScrollActive = false;
+        this.isPaused = false;
         bottomTrack.classList.remove('manual-scroll');
         bottomTrack.classList.add('auto-scroll');
-      }, 850);
+        bottomTrack.style.transition = 'none';
+      }, 650);
     }
   }
 }

@@ -32,7 +32,7 @@
                         Email is required
                     </small>
                     <small
-                        *ngIf="contactForm.get('email')?.errors?.['email'] && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched || submitted)">
+                        *ngIf="contactForm.get('email')?.errors?.['pattern'] && (contactForm.get('email')?.touched || submitted)">
                         Enter a valid email address
                     </small>
                 </div>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">WHEN ARE YOU LOOKING TO HOST YOUR EVENT?</label>
-                    <input type="input" placeholder="When to host event" class="form-control"
+                    <input type="date" placeholder="When to host event" class="form-control"
                         formControlName="eventDay" />
                 </div>
                 <div class="mb-3">
@@ -192,9 +192,7 @@
         </div>
 
         <div class="map-container">
-            <google-map height="300px" width="100%" [center]="center" [zoom]="15">
-                <map-marker [position]="center"></map-marker>
-            </google-map>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3128.4396354288187!2d-122.030013!3d38.36195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085183bd983f713%3A0xdcb1d5514474dd3e!2sYin%20Ranch%20Events!5e0!3m2!1sen!2sus!4v1762363644666!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </div>
