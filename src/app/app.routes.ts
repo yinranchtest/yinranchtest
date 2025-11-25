@@ -10,6 +10,8 @@ import { VenuesComponent } from './pages/venues/venues/venues.component';
 import { VenueDetailComponent } from './pages/venues/venue-detail/venue-detail.component';
 import { EnquiriesComponent } from './pages/enquiries/enquiries.component';
 import { AdminwrapperComponent } from './admin/adminwrapper/adminwrapper.component';
+import { VineyardComponent } from './pages/vineyard/vineyard/vineyard.component';
+import { VineyardDetailComponent } from './pages/vineyard/vineyard-detail/vineyard-detail.component';
 
 export const routes: Routes = [
     {
@@ -23,7 +25,9 @@ export const routes: Routes = [
             { path: 'lodging', component: LodgingComponent },
             { path: 'lodging/:id', component: LodgingDetailsComponent },
             { path: 'venues', component: VenuesComponent },
-            { path: 'venues/:id', component: VenueDetailComponent }
+            { path: 'venues/:id', component: VenueDetailComponent },
+            { path: 'vineyard', component: VineyardComponent },
+            { path: 'vineyard/:id', component: VineyardDetailComponent }
 
             // { path: 'media', component: MediaComponent },
             // { path: 'weddings', component: WeddingsComponent },

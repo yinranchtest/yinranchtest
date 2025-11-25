@@ -11,6 +11,21 @@
     margin-top: 60px;
   }
 
+  h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    font-family: var(--font-family-standard);
+
+    @media (max-width: 900px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+
   .stepper {
     position: relative;
 

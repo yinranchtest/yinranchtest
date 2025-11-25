@@ -21,7 +21,6 @@ export class YinRanchHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private touchHandlers: Array<() => void> = [];
   private lastWheelTime = 0;
   private wheelThrottleDelay = 400; 
-  private accumulatedWheelDelta = { top: 0, bottom: 0 };
   topImages = [
     { url: 'assets/home/rotatingImage1/img1.jpg', caption: 'Creek Cottage: A place like home.' },
     { url: 'assets/home/rotatingImage1/img2.jpg', caption: 'Hit a hole in one on our 4 hole, mini-golf course.' },

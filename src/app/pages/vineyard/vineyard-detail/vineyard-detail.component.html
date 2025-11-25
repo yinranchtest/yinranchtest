@@ -1,0 +1,66 @@
+<div class="lodging-detail-page container mt-5">
+
+    <div class="carousel-container">
+        <div class="carousel-track" [class.no-transition]="!transitionEnabled"
+            [style.transform]="getCarouselTransform()">
+            <div class="carousel-item" *ngFor="let img of loopedImages">
+                <img [src]="img" alt="carousel image" (click)="openImage(img)" />
+            </div>
+        </div>
+
+        <button class="nav prev" (click)="prev()">&#10094;</button>
+        <button class="nav next" (click)="next()">&#10095;</button>
+
+        <div class="dots">
+            <p>{{displayIndex}}/{{actualImages?.length}}</p>
+        </div>
+    </div>
+</div>
+<div class="lodging-extra-info container">
+
+    <div class="amenities-section mb-5">
+        <h2 class="lodging-title mb-2">{{venueDetails?.name}}</h2>
+        <p class="lodging-location text-muted mb-4">{{venueDetails?.subtitle}}</p>
+
+        <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
+            <div class="col"  *ngFor="let details of venueDetails?.lodgingDetails">
+                <i class={{details?.icon}}></i> {{details?.name}}
+            </div>
+        </div>
+    </div>
+
+    <div class="amenities-section mb-5" *ngIf="venueDetails?.amenities?.length">
+        <h4 class="section-title mb-3"><b>Amenities</b></h4>
+        <div class="amenities-list row row-cols-1 row-cols-md-2 g-3">
+            <div class="col" *ngFor="let details of venueDetails?.amenities">
+                <i class={{details?.icon}}></i> {{details?.name}}
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-header alert alert-info text-center d-flex justify-content-between" role="alert">
+        <b>Interested?</b> <b>Book a free tour now</b>
+        <a class="contact-button btn btn-primary" [routerLink]="['/contact-us']">Contact Us</a>
+    </div>
+
+    <div class="before-you-book-section mt-4">
+        <h5 class="section-title mb-3">Location</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3128.4396354288187!2d-122.030013!3d38.36195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085183bd983f713%3A0xdcb1d5514474dd3e!2sYin%20Ranch%20Events!5e0!3m2!1sen!2sus!4v1762363644666!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+</div>
+
+
+<!-- Expand modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered image-modal-dialog">
+        <div class="modal-content zoom-animation">
+            <div class="modal-body image-modal-body">
+                <img [src]="expandedImage" alt="Expanded Image" class="modal-image" />
+            </div>
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+    </div>
+</div>

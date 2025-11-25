@@ -1,19 +1,19 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
 import { VenuesService } from '../../../services/venues/venues.service';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-venues',
+  selector: 'app-vineyard',
   standalone: true,
   imports: [
     CommonModule,
     RouterModule
   ],
-  templateUrl: './venues.component.html',
-  styleUrl: './venues.component.scss'
+  templateUrl: './vineyard.component.html',
+  styleUrl: './vineyard.component.scss'
 })
-export class VenuesComponent implements OnInit{
+export class VineyardComponent implements OnInit{
 
   public venues: any[] = [];
   constructor(private router: Router, private _venueService: VenuesService) { }
@@ -31,7 +31,7 @@ export class VenuesComponent implements OnInit{
       });
   }
   clickToShowDetails(id: number) {
-    this.router.navigate(['/venues', id])
+    this.router.navigate(['/vineyard', id])
   }
 
 }
