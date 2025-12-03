@@ -2,13 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { VenuesService } from '../../../services/venues/venues.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TopImagesComponent } from '../../top-images/top-images.component';
+import { BottomImagesComponent } from '../../bottom-images/bottom-images.component';
 
 @Component({
   selector: 'app-vineyard',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TopImagesComponent,
+    BottomImagesComponent
   ],
   templateUrl: './vineyard.component.html',
   styleUrl: './vineyard.component.scss'

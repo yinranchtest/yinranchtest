@@ -7,24 +7,7 @@
   </div>
 </div>
 
-<div class="image-scroll-container">
-  <button class="scroll-btn prev" (click)="scrollTopPrev()"><i class="bi bi-chevron-left"></i></button>
-
-  <div class="scrolling-wrapper">
-    <div class="scroll-track d-flex">
-      <div *ngFor="let item of topImages" class="image-card mx-2 text-center">
-        <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
-        <p class="mt-2 caption-text">{{ item.caption }}</p>
-      </div>
-      <div *ngFor="let item of topImages" class="image-card mx-2 text-center">
-        <img [src]="item.url" class="img-fluid rounded" alt="Gallery Image" />
-        <p class="mt-2 caption-text">{{ item.caption }}</p>
-      </div>
-    </div>
-  </div>
-
-  <button class="scroll-btn next" (click)="scrollTopNext()"><i class="bi bi-chevron-right"></i></button>
-</div>
+<app-top-images></app-top-images>
 
 <div class="container">
   <div class="info-section">
@@ -75,18 +58,4 @@
     </div>
   </div>
 </div>
-
-<div class="image-scroll-container">
-  <button class="scroll-btn prev" (click)="scrollBottomPrev()"><i class="bi bi-chevron-left"></i></button>
-  <div class="scrolling-wrapper">
-    <div class="scroll-track d-flex">
-      <div *ngFor="let img of bottomImages" class="image-card mx-2 text-center">
-        <img [src]="img" class="img-fluid rounded" alt="Gallery Image" />
-      </div>
-      <div *ngFor="let img of bottomImages" class="image-card mx-2 text-center">
-        <img [src]="img" class="img-fluid rounded" alt="Gallery Image" />
-      </div>
-    </div>
-  </div>
-  <button class="scroll-btn next" (click)="scrollBottomNext()"><i class="bi bi-chevron-right"></i></button>
-</div>
+<app-bottom-images></app-bottom-images>
