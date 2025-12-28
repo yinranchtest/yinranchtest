@@ -168,7 +168,7 @@
     "id": 6,
     "name": "Wine Room",
     "subtitle":"A tasting room that enhances all the senses.",
-    "capacity": 0,
+    "capacity": 100,
     "homePage": "assets/venues/coverImgs/wineroom.jpg",
     "images": [
       "assets/venues/winroom/winroom-1.jpg",
